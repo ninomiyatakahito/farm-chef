@@ -9,6 +9,8 @@
   <li><%= link_to '新規登録', new_user_registration_path %></li>
 <% end %>
 
+  <li><%= link_to '新規POST', new_post_path %></li>
+
 <%# ログインしているときは以下を表示する %>
       <% if user_signed_in? %>
         <div class="greeting"> 
