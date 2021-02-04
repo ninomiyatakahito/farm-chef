@@ -5,7 +5,17 @@
 <% if user_signed_in? %>
   <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
 <% else %>
-  <li><%= link_to 'ログイン', root_path %></li>
-  <li><%= link_to '新規登録', root_path %></li>
+  <li><%= link_to 'ログイン', new_user_session_path %></li>
+  <li><%= link_to '新規登録', new_user_registration_path %></li>
 <% end %>
 
+<%# ログインしているときは以下を表示する %>
+      <% if user_signed_in? %>
+        <div class="greeting"> 
+           こんにちは、
+           <%= link_to "#{current_user.last_name}さん", "/users/#{current_user.id}", class: :greeting__link%>
+         </div> 
+      <% else %>
+<%# // ログインしているときは上記を表示する %>
+
+      <% end %>
