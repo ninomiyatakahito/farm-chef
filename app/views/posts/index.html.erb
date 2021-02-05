@@ -9,6 +9,8 @@
   <li><%= link_to '新規登録', new_user_registration_path %></li>
 <% end %>
 
+  <li><%= link_to '新規POST', new_post_path %></li>
+
 <%# ログインしているときは以下を表示する %>
       <% if user_signed_in? %>
         <div class="greeting"> 
@@ -17,5 +19,12 @@
          </div> 
       <% else %>
 <%# // ログインしているときは上記を表示する %>
+      <% end %>
 
+          <%#= link_to image_tag(post.image, class: :card__img ), post_path(post.id), method: :get %>
+      <%#= link_to "by#{post.user.last_name}", user_path(post.user.id), class: :card__user %>
+       <% @posts.each do |post| %>
+        <%= link_to image_tag(post.image), post_path(post.id) %>
+        <%= link_to post.post_text, post_path(post.id) %>
+        <%= link_to "by#{post.user.last_name}", root_path(post.user.id) %>
       <% end %>
