@@ -1,0 +1,31 @@
+<h1>ユーザープロフィール</h1>
+<%= link_to "トップページに戻る", root_path %>
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+      <%= "#{@name}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">名前</th>
+            <td class="table__col2"><%= @name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">お住まい</th>
+            <td class="table__col2"><%= @prefecture %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">事業者名</th>
+            <td class="table__col2"><%= @business_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">プロフィール</th>
+            <td class="table__col2"><%= @profile %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
