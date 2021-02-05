@@ -16,4 +16,14 @@
  </div>
 </div>
 
+<%= form_with model: [@post, @comment], local: true do |f|%>
+            <div class="field">
+              <%= f.label :comment_text, "コメント" %><br />
+              <%= f.text_field :comment_text %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn %>
+            </div>
+<% end %>
+
 
