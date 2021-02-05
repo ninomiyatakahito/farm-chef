@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @prefecture = user.prefecture
     @business_name = user.business_name
     @profile = user.profile
+    @user = User.find(params[:id])
   end
 
 end
