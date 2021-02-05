@@ -32,7 +32,7 @@
 <% @comments.each do |comment| %>
   <p>
   <%= comment.comment_text %>
-  <%= link_to comment.user.last_name, root_path(comment.user.id), class: :comment_user %>
+  <%= link_to comment.user.last_name, user_path(comment.user.id), class: :comment_user %>
   </p>
 <% end %>
 
