@@ -1,4 +1,7 @@
-
+<h1>詳細ページ</h1>
+  <div class="return_btn">
+    <%= link_to"トップページに戻る", root_path %>
+  </div>
 <% if user_signed_in? && current_user.id == @post.user_id %>
       <%= link_to @post.user.last_name , root_path, class: :hoge %>
         <div class="post__manage">
@@ -26,4 +29,10 @@
             </div>
 <% end %>
 
+<% @comments.each do |comment| %>
+  <p>
+  <%= comment.comment_text %>
+  <%= link_to comment.user.last_name, root_path(comment.user.id), class: :comment_user %>
+  </p>
+<% end %>
 
