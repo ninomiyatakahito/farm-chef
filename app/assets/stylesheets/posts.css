@@ -1,0 +1,23 @@
+/*共通ヘッダー*/
+.share-header{
+  background-color: #EDEEEF;
+  height: 100px;
+}
+
+.search-bar-contents{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.search-button{
+  background-color: #E8E5BD;
+  color: #111;
+  font-size: 100%;
+  width: 80px;
+  height: 40px;
+}
+
+.p{
+
+}
