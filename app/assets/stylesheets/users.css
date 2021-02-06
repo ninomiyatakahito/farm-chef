@@ -1,4 +1,4 @@
-.profile-title{
+.page-title{
   display: flex;
   justify-content: center;
   padding-top: 180px;
@@ -18,6 +18,7 @@
 
 .profile-image{
   width: 80%;
+  max-width: 800px;
   border-radius: 40px;
 }
 
@@ -26,6 +27,7 @@
   justify-content: center;
 }
 
+/*フォローボタン*/
 .follow-btn{
   text-decoration: none;
   display: flex;
@@ -34,14 +36,87 @@
   color: #f1f1f1;
   background-color: #00E2FF;
   width: 30%;
+  max-width: 400px;
   height: 60px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 150%;
-
+  padding: 0 40px;
 }
 
 .follow-info{
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 40px;
 }
+
+/*ユーザー詳細情報*/
+.user-info{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.user-info-list{
+  display: flex;
+  justify-content: space-around;
+  border:1px solid #70707057;
+  width: 400px;
+  margin: 3px;
+  padding: 20px 40px;
+}
+
+.table__col1{
+  color: #707070;
+}
+
+.table__col2{
+  text-align: center;
+  font-size: 150%;
+  width: 70%;
+}
+
+.table__col3{
+  text-align: center;
+  font-size: 100%;
+  width: 70%;
+}
+
+/*DM蘭*/
+.message-main{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(235, 235, 235);
+  border:1px solid #70707057;
+  height: 400px;
+  width: 500px;
+  margin-top: 80px;
+
+}
+
+
+/*ホームボタン*/
+.top-btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #ff0000b5;
+  width: 30%;
+  max-width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+}
+
+.home-btn{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,20 +1,23 @@
-<h2 class="page-heading">新規post</h2>
+<%= render "shared/header" %>
 
-<%= form_with(model: @post, local: true) do |f| %>
+<div class="post-main">
+  <h2 class="page-title">投稿ページ</h2>
+  <div class="red-line"></div>
+  <%= form_with(model: @post, local: true) do |f| %>
 
-  <div class="field">
-    <%= f.label :post_text, "投稿内容" %><br />
-    <%= f.text_field :post_text %>
+  <div class="field-image">
+    <%= f.label :image, "画像", class:"post-image-label" %><br />
+    <%= f.file_field :image, class:"post-image"%>
   </div>
 
   <div class="field">
-    <%= f.label :image, "画像" %><br />
-    <%= f.file_field :image %>
+    <%= f.label :post_text, "投稿内容" %><br />
+    <%= f.text_field :post_text, class:"post-text" %>
   </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
 
-<% end %>
+  <% end %>
 </div>

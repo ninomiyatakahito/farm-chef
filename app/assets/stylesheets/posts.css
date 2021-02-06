@@ -2,12 +2,14 @@
 .share-header{
   background-color: #EDEEEF;
   height: 100px;
+  display: flex;
 }
 
 .search-bar-contents{
-  display: flex;
-  justify-content: center;
   padding-top: 30px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search-button{
@@ -16,4 +18,67 @@
   font-size: 100%;
   width: 80px;
   height: 40px;
+  border-radius: 20px;
+}
+
+/*ヘッダーアイコン*/
+.farm-chef-icon{
+  width: 100px;
+  margin-left: 40%;
+  margin-top: 5px;
+}
+
+
+/*新規投稿ページ*/
+.post-main{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.field-image{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border:1px solid #70707057;
+  height: 40px;
+  width: 500px;
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.post-image-label{
+  padding: 0 20px;
+}
+
+.field{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+
+
+  width: auto;
+}
+
+.post-text{
+  width: 100%;
+  height: 300px;
+  border:1px solid #70707057;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form__btn{
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 5px 50px;
+  border-color: #f1f1f1;
 }
