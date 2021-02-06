@@ -1,0 +1,47 @@
+.profile-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 180px;
+  font-size: 200%;
+}
+
+.red-line{
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  width: 400px;
+  height: 1.5px;
+
+}
+
+
+.profile-image{
+  width: 80%;
+  border-radius: 40px;
+}
+
+.profile-image-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.follow-btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  width: 30%;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 150%;
+
+}
+
+.follow-info{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
