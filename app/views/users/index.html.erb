@@ -1,5 +1,6 @@
 <h1>ユーザーの一覧ページ</h1>
 <% @users.each do |user| %>
+  
   <li><%= link_to user.last_name %><%= link_to user.first_name %></li>
   <li><%= link_to user.prefecture %></li>
   <li><%= link_to user.business_name %></li>
