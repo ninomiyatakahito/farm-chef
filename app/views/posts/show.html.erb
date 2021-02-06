@@ -3,7 +3,7 @@
     <%= link_to"トップページに戻る", root_path %>
   </div>
 <% if user_signed_in? && current_user.id == @post.user_id %>
-      <%= link_to @post.user.last_name , root_path, class: :hoge %>
+      <%= link_to @post.user.last_name , user_path, class: :hoge %>
         <div class="post__manage">
           <%= link_to "編集する",  edit_post_path, class: :post__btn %>
           <%= link_to "削除する",  post_path, method: :delete, class: :post__btn %>
