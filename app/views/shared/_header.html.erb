@@ -15,13 +15,12 @@
           マイプロフィール
         <%= link_to "#{current_user.last_name}さん", "/users/#{current_user.id}", class: :hoge%>
       </div> 
+      <div class="user-edit">
+        <li><%=  link_to 'プロフィール編集', edit_user_registration_path %></li>
+      </div>
     <% else %>
 <%# // ログインしているときは上記を表示する %>
     <% end %>
-
-  <div class="user-edit">
-      <li><%=  link_to 'プロフィール編集', edit_user_registration_path %></li>
-  </div>
 
   <div class="user-status">
     <% if user_signed_in? %>
