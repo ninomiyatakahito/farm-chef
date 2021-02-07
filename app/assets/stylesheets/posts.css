@@ -31,6 +31,28 @@
 
 
 /*投稿一覧ページ*/
+.new-post{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.post__btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 0 40px;
+}
+li{
+  list-style: none;
+}
 .card__wrapper{
   max-width: 799px;
   margin-left: auto;

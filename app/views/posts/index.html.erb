@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
 
 <div class="posts-list">
-  <li><%= link_to '新規POST', new_post_path %></li>
+  <div class="new-post">
+  <li><%= link_to '新規POST', new_post_path, class: :post__btn %></li>
+  </div>
   <li><%= link_to 'ユーザーの一覧', users_path %></li>
 
 <div class="card__wrapper">
