@@ -1,32 +1,42 @@
 <%= render "shared/header" %>
-<h1>Posts#index</h1>
 
-<p>Find me in app/views/posts/index.html.erb</p>
-
-<% if user_signed_in? %>
-  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
-<% else %>
-  <li><%= link_to 'ログイン', new_user_session_path %></li>
-  <li><%= link_to '新規登録', new_user_registration_path %></li>
-<% end %>
-
-  <li><%= link_to '新規POST', new_post_path %></li>
+<div class="posts-list">
+  <div class="new-post">
+  <li><%= link_to '新規POST', new_post_path, class: :post__btn %></li>
+  </div>
   <li><%= link_to 'ユーザーの一覧', users_path %></li>
-  <li><%=  link_to 'ユーザー編集', edit_user_registration_path%></li>
-<%# ログインしているときは以下を表示する %>
-      <% if user_signed_in? %>
-        <div class="greeting"> 
-           こんにちは、
-           <%= link_to "#{current_user.last_name}さん", "/users/#{current_user.id}", class: :hoge%>
-         </div> 
-      <% else %>
-<%# // ログインしているときは上記を表示する %>
-      <% end %>
 
-          <%#= link_to image_tag(post.image, class: :card__img ), post_path(post.id), method: :get %>
-      <%#= link_to "by#{post.user.last_name}", user_path(post.user.id), class: :card__user %>
-       <% @posts.each do |post| %>
-        <%= link_to image_tag(post.image), post_path(post.id) %>
-        <%= link_to post.post_text, post_path(post.id) %>
-        <%= link_to "by#{post.user.last_name}", user_path(post.user.id) %>
-      <% end %>
+<div class="card__wrapper">
+  <h1 class="page-title" >投稿一覧</h1>
+    <div class="red-line"></div>
+      <div class="card-main">
+        <div class="posts-list">
+        <% @posts.each do |post| %>
+            <div class="card-contents">
+              <div class="card-img-wrapper">
+                <div class="card-img">
+                  <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="postuser-img-name-date">
+                  <div class="postuser-img">
+                    画像
+                  </div>
+                  <div class="postuser-name">
+                      <%= link_to "#{post.user.last_name}", user_path(post.user.id), class: :card__user %>
+                  </div>
+                  <div class="post-date">
+                    <p>2021/01/31 13:45</p>
+                  </div>
+                </div>
+                <div class="card-text">
+                  <%= link_to post.post_text, post_path(post.id) %>
+                </div>
+              </div>
+            </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+</div>

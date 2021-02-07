@@ -1,0 +1,169 @@
+/*共通ヘッダー*/
+.share-header{
+  background-color: #EDEEEF;
+  height: 100px;
+  display: flex;
+}
+
+.search-bar-contents{
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-button{
+  background-color: #E8E5BD;
+  color: #111;
+  font-size: 100%;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+/*ヘッダーアイコン*/
+.farm-chef-icon{
+  width: 100px;
+  margin-left: 40%;
+  margin-top: 5px;
+}
+
+
+
+
+/*投稿一覧ページ*/
+.new-post{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.post__btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 0 40px;
+}
+li{
+  list-style: none;
+}
+.card__wrapper{
+  max-width: 799px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-img-wrapper{
+  width: 250px;
+
+}
+.card__img{
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 40px;
+  padding: 5px 10px;
+
+}
+
+
+.card-contents{
+  border:1px solid #70707057;
+  margin-top: 10px;
+  display: flex;
+}
+
+.card-content{
+  margin-left: 10px;
+}
+
+.postuser-img-name-date{
+  display: flex;
+
+}
+
+.postuser-img{
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.postuser-name{
+  margin-left: 10px;
+}
+
+.post-date{
+  margin-left: 10%;
+}
+
+.card-text{
+  width: 93%;
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+
+/*新規投稿ページ*/
+.post-main{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.field-image{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border:1px solid #70707057;
+  height: 40px;
+  width: 500px;
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.post-image-label{
+  padding: 0 20px;
+}
+
+.field{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+
+
+  width: auto;
+}
+
+.post-text{
+  width: 100%;
+  height: 300px;
+  border:1px solid #70707057;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form__btn{
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 5px 50px;
+  border-color: #f1f1f1;
+}

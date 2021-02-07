@@ -1,43 +1,64 @@
-<div class="user_profire">
-  <div class="user_profire_title">
-    <h1>生産者のプロフフィール</h1>
+<%= render "shared/header" %>
+
+<div class="user-profile">
+  <div class="profile-heading">
+    <div class="main">
+      <div class="inner">
+        <div class="user__wrapper">
+          <div class="page-title">
+            <p>生産者のプロフィール</p>
+          </div>
+            <div class="red-line"></div>
+          <div class="profile-image-wrapper">
+            <%= image_tag @user.avatar ,class: "profile-image" %>
+          </div>
+          <!--フォローボタン-->
+          <div class="follow-info">
+            <%= link_to "フォローする", root_path, class: 'follow-btn' %>
+          </div>
+          <!--ユーザー詳細情報-->
+          <div class="user-info">
+            <div class="table">
+                <div class="user-info-list">
+                  <div class="table__col1">名前</div>
+                  <div class="table__col2"><%= @name %></div>
+                </div>
+
+                <div class="user-info-list">
+                  <div class="table__col1">お住まい</div>
+                  <div class="table__col2"><%= @prefecture %></div>
+                </div>
+
+                <div class="user-info-list">
+                  <div class="table__col1">事業者名</div>
+                  <div class="table__col2"><%= @business_name %></div>
+                </div>
+
+                <div class="user-info-list">
+                  <div class="table__col1">プロフィール</div>
+                  <div class="table__col3"><%= @profile %></div>
+                </div>
+            </div>
+          </div>
+          <!--ユーザー詳細情報-->
+        </div>
+        <!--DM機能-->
+        <div class="message">
+          <div class="message-main">
+          <p>DM機能</p>
+          </div>
+        </div>
+        <!--DM機能-->
+      </div>
+    </div>
   </div>
-  
-<%= link_to "トップページに戻る", root_path %>
-<div class="main">
-  <div class="inner">
-    <div class="user__wrapper">
-      <h2 class="page-heading">
+</div>
 
-    <tr>
-    <th class="table__col0">プロフィール画像</th>
-    <td class="table__col0"><%= image_tag @user.avatar %></td>
-    </tr>
-
-      <%= "#{@name}さんの情報"%>
-      </h2>
-      <table class="table">
-        <tbody>
-          <tr>
-            <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @name %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">お住まい</th>
-            <td class="table__col2"><%= @prefecture %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">事業者名</th>
-            <td class="table__col2"><%= @business_name %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= @profile %></td>
-          </tr>
-        </tbody>
-      </table>
+      
     </div>
   </div>
 </div>
 </div>
-
+<div class="home-btn">
+<%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+</div>
