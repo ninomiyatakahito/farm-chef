@@ -13,6 +13,7 @@
             <%= image_tag @user.avatar ,class: "profile-image" %>
           </div>
           <!--フォローボタン-->
+
           <div class="follow-info">
             <%= link_to "フォローする", root_path, class: 'follow-btn' %>
           </div>
@@ -52,13 +53,20 @@
       </div>
     </div>
   </div>
-</div>
 
-      
-    </div>
+
+  <div class="user-edit-btn">
+    <li><%=  link_to 'プロフィールを編集する', edit_user_registration_path, class: 'edit-btn' %></li>
+  </div>
+
+  <div class="home-btn">
+    <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
   </div>
 </div>
-</div>
-<div class="home-btn">
-<%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
-</div>
+
+<h3><%= @user.last_name %></h3>
+<h2>投稿内容</h2>
+<% @user.posts.each do |post| %>
+  <a href="/#/<%= post.id %>"><%= post.post_text %></a>
+  <hr>
+<% end %>

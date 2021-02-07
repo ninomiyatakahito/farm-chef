@@ -7,5 +7,13 @@ class User < ApplicationRecord
          has_many :posts, dependent: :destroy
          has_many :comments , dependent: :destroy
          
-         has_one_attached :avatar  #ユーザーのアバター
+         has_one_attached :avatar 
+
+         has_many :likes, dependent:  :delete_all
+         has_many :liked_posts, through: :likes, source: :post　
+
+  def already_liked?(post)                #ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定
+    self.likes.exists?(post_id: post.id)
+  end
 end
+

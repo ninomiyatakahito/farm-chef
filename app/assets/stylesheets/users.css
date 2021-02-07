@@ -97,6 +97,26 @@
 
 }
 
+/*プロフィール編集ボタン*/
+.user-edit-btn{
+
+}
+.edit-btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #00a2ffb5;
+  width: 30%;
+  max-width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
 /*ホームボタン*/
 .top-btn{
