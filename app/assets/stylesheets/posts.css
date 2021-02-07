@@ -7,7 +7,6 @@
 
 .search-bar-contents{
   padding-top: 30px;
-  padding-right: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -29,11 +28,75 @@
 }
 
 
+
+
+/*投稿一覧ページ*/
+.card__wrapper{
+  max-width: 799px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-img-wrapper{
+  width: 250px;
+
+}
+.card__img{
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 40px;
+  padding: 5px 10px;
+
+}
+
+
+.card-contents{
+  border:1px solid #70707057;
+  margin-top: 10px;
+  display: flex;
+}
+
+.card-content{
+  margin-left: 10px;
+}
+
+.postuser-img-name-date{
+  display: flex;
+
+}
+
+.postuser-img{
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.postuser-name{
+  margin-left: 10px;
+}
+
+.post-date{
+  margin-left: 10%;
+}
+
+.card-text{
+  width: 93%;
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+
 /*新規投稿ページ*/
 .post-main{
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+
 }
 .field-image{
   display: flex;
