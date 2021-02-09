@@ -1,24 +1,4 @@
-/*共通ヘッダー*/
-.share-header{
-  background-color: #EDEEEF;
-  height: 100px;
-  display: flex;
-}
 
-.search-bar-contents{
-  padding-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.search-button{
-  background-color: #E8E5BD;
-  color: #111;
-  font-size: 100%;
-  width: 80px;
-  height: 40px;
-  border-radius: 20px;
-}
 
 /*ヘッダーアイコン*/
 .farm-chef-icon{
