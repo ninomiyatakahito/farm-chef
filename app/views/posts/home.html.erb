@@ -1,5 +1,44 @@
 <%= render "shared/header" %>
+<div class="top-main-contents">
   <div class="heading-img">
     <%= link_to image_tag("farmcheflogo.jpg", class:"farm-chef-heading-icon"), "/" %>
   </div>
+  <div class="concep-message">
+    <p>
+    <br><b>農家とシェフをつなぐ</b>
+    <br><b>プラットフォーム</b>
+    </p>
+  </div>
+  <div class="service-massage">
+        <%= link_to image_tag("cabbage.jpg", class:"service-massage-img"), "/" %>
+  </div>
+
+  <div class="service-description">
+  </div>
+
+  
+
+<div class="search-users">
+  <div class="search-user">
+    <div class="user-box">
+      <p class="user-description">多様な生産者と繋がることができる。季節や地域の美味しさを味わう人へ。 様々な食材とであえます。</p>
+      <div class="user-box-btn">
+        <%= link_to "料理人を探す", root_path, class: 'user-btn' %>
+      </div>
+    </div>
+
+    <div class="user-box">
+      <p class="user-description">新しい顧客を見つけられる。規格外の野菜を売ることが可能になります。</p>
+      <div class="user-box-btn">
+        <%= link_to "生産者を探す", root_path, class: 'user-btn' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
 <%= render "shared/footer" %>

@@ -19,13 +19,82 @@
   height: 40px;
   border-radius: 20px;
 }
-
+/*farm-chefの横長ロゴ*/
 .heading-img{
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+  text-align: center;
+  margin-top: 10%;
 }
 
 .farm-chef-heading-icon{
+  width: 80%;
+  max-width: 600px;
+}
+/*トップメッセージ*/
+.concep-message{
+  display: flex;
+  justify-content: center;
+}
+
+.concep-message p{
+  font-size: 150%;
+  text-align: center;
+}
+
+.service-massage{
+  padding-top: 80px;
+}
+.service-massage-img{
   width: 100%;
+}
+
+/*サービスの説明*/
+.service-description{
+  height: 400px;
+  background-color: #fff;
+}
+
+/*ユーザーボタン*/
+.search-user{
+  padding: 20px 40px;
+}
+
+.search-user{
+  display: flex;
+  justify-content: center;
+}
+
+.user-box{
+  background-color: paleturquoise;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+}
+
+.user-description{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 180px;
+  color: #fff;
+  padding-top: 20%;
+}
+
+.user-box-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.user-btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #ff0000b5;
+  width: 50%;
+  max-width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
 }
