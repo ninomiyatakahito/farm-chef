@@ -1,24 +1,4 @@
-/*共通ヘッダー*/
-.share-header{
-  background-color: #EDEEEF;
-  height: 100px;
-  display: flex;
-}
 
-.search-bar-contents{
-  padding-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.search-button{
-  background-color: #E8E5BD;
-  color: #111;
-  font-size: 100%;
-  width: 80px;
-  height: 40px;
-  border-radius: 20px;
-}
 
 /*ヘッダーアイコン*/
 .farm-chef-icon{
@@ -232,3 +212,33 @@ li{
   margin-right: auto;
   margin: 40px;
 }
+
+/*フッター*/
+
+.share-footer{
+  background-color: #EDEEEF;
+  margin-top: 40px;
+}
+
+.contents{
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.content-buy p{
+  font-size: 150%;
+}
+
+.buy-lists{
+  margin-top: 20px;
+  color: #727171;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.content-buy{
+  text-align: center;
+  margin-bottom: 20px;
+}
+

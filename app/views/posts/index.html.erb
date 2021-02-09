@@ -34,7 +34,7 @@
                   <%= link_to post.post_text, post_path(post.id) %>
                 </div>
                 <div class="like-count">
-                     いいね<%= post.likes.count %>
+                     いいね!<%= post.likes.count %>
                 </div>
               </div>
             </div>
@@ -43,3 +43,4 @@
       </div>
     </div>
 </div>
+<%= render "shared/footer" %>
