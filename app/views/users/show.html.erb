@@ -19,20 +19,19 @@
             <% if current_user.following?(@user) %>
               <%= form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f| %>
                 <%= hidden_field_tag :follow_id, @user.id %>
-                <%= f.submit 'Unfollow', class: 'btn btn-danger btn-block' %>
+                <%= f.submit 'フォロー中', class: 'btn btn-danger btn-block' %>
               <% end %>
             <% else %>
               <%= form_for(current_user.relationships.build) do |f| %>
                 <%= hidden_field_tag :follow_id, @user.id %>
-                <%= f.submit 'Follow', class: 'btn btn-primary btn-block' %>
+                <%= f.submit 'フォローする', class: 'btn btn-primary btn-block' %>
               <% end %>
             <% end %>
           <% end %>
         </div>
 
-        <div class="count"><%=@user.followings.count %></div>
-        <div class="count"><%=@user.followers.count %></div>
-        <div class="count"><%=@user.followers %></div>
+        <div class="count"><%=@user.followings.count %>フォロー</div>
+        <div class="count"><%=@user.followers.count %>フォロワー</div>
 
           <!--ユーザー詳細情報-->
           <div class="user-info">
@@ -107,12 +106,16 @@
   </div>
 </div>
 
-<h3><%= @user.last_name %></h3>
-<h2>投稿内容</h2>
-<% @user.posts.each do |post| %>
-  <a href="/#/<%= post.id %>"><%= post.post_text %></a>
-  <hr>
-<% end %>
+  <div class="posted-contents-wrapper">
+    <div class="posted">
+      <h3 class="posted-user-name"><%= @user.last_name %>さんの投稿一覧</h3>
+        <h2>投稿内容</h2>
+        <% @user.posts.each do |post| %>
+          <a href="/#/<%= post.id %>"><%= post.post_text %></a>
+          <hr>
+        <% end %>
+    </div>
+  </div>
 
 <%= render "shared/footer" %>
 

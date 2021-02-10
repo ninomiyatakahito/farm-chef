@@ -1,0 +1,13 @@
+<h1>管理者ページ</h1>
+<b>以下が各ユーザーのDMやりとり内容</b>
+
+  <div class="users-message-contents-list">
+  <% @messages.each do |message| %>
+    <li><%=message.content%></li> 
+    <li>ユーザーID<%=message.user_id%></li> 
+    <li>チャット部屋番号<%=message.room_id%></li>
+    <li>やり取りの日時<%=message.created_at%></li>  
+        <li><%=message%></li>
+
+  <% end %>
+  </div>

@@ -1,5 +1,9 @@
 class MessagesController < ApplicationController
     before_action :authenticate_user!, :only => [:create]
+
+    def index
+      @messages = Message.all
+    end
   
     def create
       if Entry.where(:user_id => current_user.id, :room_id => params[:message][:room_id]).present?
