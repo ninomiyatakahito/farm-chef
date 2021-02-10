@@ -19,20 +19,21 @@
             <% if current_user.following?(@user) %>
               <%= form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f| %>
                 <%= hidden_field_tag :follow_id, @user.id %>
-                <%= f.submit 'Unfollow', class: 'btn btn-danger btn-block' %>
+                <%= f.submit 'フォロー中', class: "followings-btn" %>
               <% end %>
             <% else %>
               <%= form_for(current_user.relationships.build) do |f| %>
                 <%= hidden_field_tag :follow_id, @user.id %>
-                <%= f.submit 'Follow', class: 'btn btn-primary btn-block' %>
+                <%= f.submit 'フォローする', class: "followers-btn" %>
               <% end %>
             <% end %>
           <% end %>
         </div>
 
-         <div class="count"><%=@user.followings.count %></div>
-         <div class="count"><%=@user.followers.count %></div>
-        <div class="count"><%=@user.followers %></div>
+        <div class="follow-counts">
+          <div class="follow-count"><%=@user.followings.count %>フォロー</div>
+          <div class="follow-count"><%=@user.followers.count %>フォロワー</div>
+        </div>
 
           <!--ユーザー詳細情報-->
           <div class="user-info">
@@ -59,14 +60,38 @@
             </div>
           </div>
           <!--ユーザー詳細情報-->
-        </div>
+
+
         <!--DM機能-->
         <div class="message">
           <div class="message-main">
-          <p>DM機能</p>
+            <p >DM機能</p>
+            <h1>ユーザー詳細</h1>
+            <h2><%= @user.last_name %></h2>
+            <% if @user.id == current_user.id %>
+              <% else %>
+                <% if @isRoom == true %>
+                  <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+              <% else %>
+                <%= form_for @room do |f| %>
+                  <%= fields_for @entry do |e| %>
+                    <%= e.hidden_field :user_id, :value=> @user.id %>
+                  <% end %>
+                    <%= f.submit "チャットを始める" %>
+                <% end %>
+              <% end %>
+            <% end %>
+
+            <h1>DM機能下段</h1>
+            <% if user_signed_in? %>
+              <h2>Hello <%#= current_user.email %></h2>
+                
+              <% else %>
+            <% end %>
           </div>
         </div>
         <!--DM機能-->
+
       </div>
     </div>
   </div>
@@ -81,12 +106,49 @@
   </div>
 </div>
 
-<h3><%= @user.last_name %></h3>
-<h2>投稿内容</h2>
-<% @user.posts.each do |post| %>
-  <a href="/#/<%= post.id %>"><%= post.post_text %></a>
-  <hr>
-<% end %>
+  <div class="posted-contents-wrapper">
+    <div class="posted">
+      <h3  class="posted-user-name"><b><%= @user.last_name %>さんの投稿一覧</b></h3>
+      <div class="red-line"></div>
+      <h2 class="posted-user-contents"></h2>
+        <div class="posted-user-content">
+          <% @user.posts.each do |post| %>
+            <div class="posted-img-text">
+              <div class="posted-img">
+                <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+              </div>
+              <div class="posted-text">
+              <a href="/#/<%= post.id %>"><%= post.post_text %></a>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
 
 <%= render "shared/footer" %>
 
+
+
+
+
+<!--<h1>ユーザー詳細</h1>
+
+<h2><%= @user.email %></h2>
+
+<% if @user.id == current_user.id %>
+
+<% else %>
+  <% if @isRoom == true %>
+    <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+  <% else %>
+    <%= form_for @room do |f| %>
+      <%= fields_for @entry do |e| %>
+        <%= e.hidden_field :user_id, :value=> @user.id %>
+      <% end %>
+      <%= f.submit "チャットを始める" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= link_to "ユーザー一覧に戻る", users_path %>-->
