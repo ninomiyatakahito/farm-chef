@@ -213,3 +213,39 @@ li{
   margin: 40px;
 }
 
+
+/*フォロー機能*/
+.followings-btn{
+  background-color:#00E2FF;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.followers-btn{
+  background-color:#f1f1f1;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.follow-counts{
+  display: flex;
+  justify-content: center;
+}
+
+.follow-count{
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.posted-user-name{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.posted-user-contents{
+  
+}

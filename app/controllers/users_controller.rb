@@ -34,8 +34,8 @@ class UsersController < ApplicationController
         @entry = Entry.new
       end
     end
-
   end
 
+  
 end
 
