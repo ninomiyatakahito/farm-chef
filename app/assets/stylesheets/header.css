@@ -20,9 +20,17 @@
   border-radius: 20px;
 }
 /*farm-chefの横長ロゴ*/
+
+.top-main-contents{
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .heading-img{
   text-align: center;
   margin-top: 10%;
+  padding: 10px 60px;
 }
 
 .farm-chef-heading-icon{
@@ -37,7 +45,7 @@
 }
 
 .concep-message p{
-  font-size: 150%;
+  font-size: 200%;
   text-align: center;
 }
 
@@ -108,6 +116,11 @@
   padding: 80px 40px ;
 }
 
+.top-page-posts-btn{
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /*スライダー部分*/
@@ -128,7 +141,7 @@ img{
     width: 100%;
     height: auto;
 }
-input{
+.out input{
     display: none;
 }
 .in{
@@ -191,15 +204,18 @@ input:nth-of-type(4):checked ~ .in label:nth-of-type(4) img{
     animation: slide 14s infinite;/* (a+b)×c=x */
     opacity: 0;
 }
+
 @keyframes slide{
     0%{opacity: 0;}
     3.5%{opacity: 1;z-index: 1;}/* b÷x×100=y */
     25%{opacity: 1;}/* 100÷c=z */
     28.5%{opacity: 0;z-index: 0;}/* y+z */
 }
+
 input:checked ~ .in img,input:checked ~ .in span::before{
     animation: none;
 }
-.in:hover img,.in:hover span::before{
+/*.in:hover img,.in:hover span::before{
     animation-play-state:paused;/* マウスを載せると一時停止 */
-}
+/*}*/
+

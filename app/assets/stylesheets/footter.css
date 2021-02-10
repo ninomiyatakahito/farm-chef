@@ -1,0 +1,29 @@
+/*フッター*/
+
+.share-footer{
+  background-color: #EDEEEF;
+  margin-top: 40px;
+}
+
+.contents{
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.content-buy b{
+  font-size: 115%;
+}
+
+.buy-lists{
+  margin-top: 20px;
+  color: #727171;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.content-buy{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
