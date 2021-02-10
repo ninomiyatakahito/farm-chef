@@ -63,7 +63,33 @@
         <!--DM機能-->
         <div class="message">
           <div class="message-main">
-          <p>DM機能</p>
+          <p >DM機能</p>
+          <h1>ユーザー詳細</h1>
+          <h2><%= @user.last_name %></h2>
+            <% if @user.id == current_user.id %>
+              <% else %>
+                <% if @isRoom == true %>
+                  <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+              <% else %>
+                <%= form_for @room do |f| %>
+                  <%= fields_for @entry do |e| %>
+                    <%= e.hidden_field :user_id, :value=> @user.id %>
+                  <% end %>
+                    <%= f.submit "チャットを始める" %>
+                <% end %>
+              <% end %>
+            <% end %>
+
+            <h1>DM機能下段</h1>
+            <% if user_signed_in? %>
+              <h2>Hello <%#= current_user.email %></h2>
+                
+              <% else %>
+            <% end %>
+
+
+
+
           </div>
         </div>
         <!--DM機能-->
