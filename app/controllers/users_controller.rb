@@ -12,7 +12,9 @@ class UsersController < ApplicationController
     @business_name = user.business_name
     @profile = user.profile
 
-    @user = User.find(params[:id])
+    
+    @users = User.all
+
     @user = User.find(params[:id])
     @currentUserEntry = Entry.where(user_id: current_user.id)
     @userEntry = Entry.where(user_id: @user.id)
