@@ -109,11 +109,18 @@
   <div class="posted-contents-wrapper">
     <div class="posted">
       <h3  class="posted-user-name"><b><%= @user.last_name %>さんの投稿一覧</b></h3>
+      <div class="red-line"></div>
       <h2 class="posted-user-contents"></h2>
-        <div class="posted-user-contents">
+        <div class="posted-user-content">
           <% @user.posts.each do |post| %>
-            <a href="/#/<%= post.id %>"><%= post.post_text %></a>
-            <hr>
+            <div class="posted-img-text">
+              <div class="posted-img">
+                <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+              </div>
+              <div class="posted-text">
+              <a href="/#/<%= post.id %>"><%= post.post_text %></a>
+              </div>
+            </div>
           <% end %>
         </div>
     </div>

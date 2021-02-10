@@ -64,6 +64,7 @@ li{
   border:1px solid #70707057;
   margin-top: 10px;
   display: flex;
+  height: 200px;
 }
 
 .card-content{
@@ -241,11 +242,41 @@ li{
   margin-top: 20px;
 }
 
+
+/*ユーザーの投稿一覧情報*/
+.posted{
+  border: 1px solid #888787;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
 .posted-user-name{
   text-align: center;
   margin-top: 80px;
 }
 
-.posted-user-contents{
-  
+.posted-user-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 450px;
+  padding-top: 80px;
+}
+
+.posted-img-text{
+  border: 1px solid #888787;
+  margin-top: 10px;
+  display: flex;
+}
+
+.posted-img{
+  margin: 0 10px;
+}
+
+.posted-text{
+  width: 80%;
+  padding: 10px 20px;
 }
