@@ -65,13 +65,14 @@
         <!--DM機能-->
         <div class="message">
           <div class="message-main">
-            <p >DM機能</p>
-            <h1>ユーザー詳細</h1>
-            <h2><%= @user.name %></h2>
+            <b class="dm-title">DM機能</b>
+            <h1></h1>
+            <h2 class="dm-from-name"><%= @user.name %>さんとのチャットはこちらから</h2>
+
             <% if @user.id == current_user.id %>
               <% else %>
                 <% if @isRoom == true %>
-                  <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+                  <p><a href="/rooms/<%= @roomId %>">チャットへすすむ</a>
               <% else %>
                 <%= form_for @room do |f| %>
                   <%= fields_for @entry do |e| %>
@@ -82,12 +83,12 @@
               <% end %>
             <% end %>
 
-            <h1>DM機能下段</h1>
+            <h1> </h1>
             <% if user_signed_in? %>
-              <h2>Hello <%#= current_user.email %></h2>
-                
+            
               <% else %>
             <% end %>
+
           </div>
         </div>
         <!--DM機能-->
@@ -97,13 +98,20 @@
   </div>
 
 
-  <div class="user-edit-btn">
-    <li><%=  link_to 'プロフィールを編集する', edit_user_registration_path, class: 'edit-btn' %></li>
-  </div>
-
-  <div class="home-btn">
-    <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
-  </div>
+  <% if user_signed_in? %>
+     <% if current_user.id == @user.id %>
+      <div class="user-edit-btn">
+        <li><%=  link_to 'プロフィールを編集する', edit_user_registration_path, class: 'edit-btn' %></li>
+        <div class="home-btn">
+          <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+        </div>
+      </div>
+    <% else %>
+      <div class="home-btn">
+        <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
   <div class="posted-contents-wrapper">
