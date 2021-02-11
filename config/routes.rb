@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
   resources :users
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships
 
   resources :messages, :only => [:create, :index]
   resources :rooms, :only => [:create, :show, :index]
