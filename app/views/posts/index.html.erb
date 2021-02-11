@@ -24,7 +24,7 @@
                     <%=link_to image_tag(post.user.avatar, class: :card__im) %>
                   </div>
                   <div class="postuser-name">
-                      <%= link_to "#{post.user.last_name}", user_path(post.user.id), class: :card__user %>
+                      <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user %>
                   </div>
                   <div class="post-date">
                     <p>2021/01/31 13:45</p>

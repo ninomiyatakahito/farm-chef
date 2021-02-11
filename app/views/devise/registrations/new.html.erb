@@ -5,12 +5,12 @@
 
 
   <div class="field">
-        <%= f.label :name %><br />
+        <%= f.label :"名前" %><br />
         <%= f.text_field :name %>
   </div>
 
   <div class="field">
-        <%= f.label :kana_name %><br />
+        <%= f.label :"フリガナ" %><br />
         <%= f.text_field :kana_name %>
   </div>
 
@@ -38,41 +38,42 @@
 
 
   <div class="field">
-        <%= f.label :post_code %><br />
+        <%= f.label :"郵便番号" %><br />
         <%= f.text_field :post_code %>
   </div>
 
   <div class="field">
-        <%= f.label :prefecture %><br />
+        <%= f.label :"都道府県" %><br />
         <%= f.text_field :prefecture %>
   </div>
 
   <div class="field">
-        <%= f.label :city %><br />
+        <%= f.label :"市町村" %><br />
         <%= f.text_field :city %>
   </div>
 
   <div class="field">
-        <%= f.label :street %><br />
+        <%= f.label :"番地（建物名・部屋番号を含む）" %><br />
         <%= f.text_field :street %>
   </div>
 
   <div class="field">
-        <%= f.label :business_name %><br />
+        <%= f.label :"法人名、屋号、店舗名でも可" %><br />
         <%= f.text_field :business_name %>
   </div>
 
   <div class="field">
-        <%= f.label :profile %><br />
+        <%= f.label :"プロフィール（400字いないでご記入ください）" %><br />
         <%= f.text_field :profile %>
   </div>
 
     <div class="field">
-        <%= f.label :avatar %><br />
+        <%= f.label :"プロフィール画像" %><br />
         <%= f.file_field :avatar %>
   </div>
 
   <div class='field'>
+    <%= f.label :"生産者か料理人を洗濯してください" %><br />
     <%= f.select :kind, [["生産者", "1"], ["料理人", "2"]], class:"input-genre", include_blank: "選択して下さい" %>
   </div>
 
@@ -84,7 +85,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :"パスワード(半角英数字6文字以上)" %><br />
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -92,7 +93,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :"パスワード確認用（上記と同じパスワードを入力してください）" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
