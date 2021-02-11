@@ -7,12 +7,12 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    @name = user.last_name
+    @name = user.name
     @prefecture = user.prefecture
     @business_name = user.business_name
     @profile = user.profile
 
-    
+
     @users = User.all
 
     @user = User.find(params[:id])
@@ -35,7 +35,6 @@ class UsersController < ApplicationController
       end
     end
   end
-
   
 end
 

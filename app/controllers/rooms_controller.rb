@@ -8,11 +8,16 @@ class RoomsController < ApplicationController
   end
 
   def show
+
+    @posts = Post.all
+
     @room = Room.find(params[:id])
     if Entry.where(:user_id => current_user.id, :room_id => @room.id).present?
       @messages = @room.messages
       @message = Message.new
       @entries = @room.entries
+      
+      @users = User.find(params[:id])
     else
       redirect_back(fallback_location: root_path)
     end

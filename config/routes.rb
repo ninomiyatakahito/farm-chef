@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   get 'followings/index'
   devise_for :users
   get 'posts/index'
@@ -6,12 +7,13 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
     resources :likes
+    
     member do
       get 'home'
     end
   end
   resources :users
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships
 
   resources :messages, :only => [:create, :index]
   resources :rooms, :only => [:create, :show, :index]

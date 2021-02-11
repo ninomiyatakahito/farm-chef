@@ -13,7 +13,7 @@
     <% if user_signed_in? %>
       <div class="greeting"> 
           マイプロフィール
-        <%= link_to "#{current_user.last_name}さん", "/users/#{current_user.id}", class: :hoge%>
+        <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :hoge%>
       </div> 
       <div class="user-edit">
         <li><%=  link_to 'プロフィール編集', edit_user_registration_path %></li>

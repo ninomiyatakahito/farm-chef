@@ -89,17 +89,24 @@
 
 /*DM蘭*/
 .message-main{
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(235, 235, 235);
   border:1px solid #70707057;
-  height: 400px;
+  height: 100px;
   width: 500px;
   margin-top: 80px;
-
 }
+
+.dm-title{
+  display: flex;
+  justify-content: center;
+}
+
+
+
 
 /*プロフィール編集ボタン*/
 .user-edit-btn{
@@ -159,11 +166,16 @@
 }
 
 .users-list-wrapper{
-
+  padding: 0 20px;
 }
 
 .users-list-end-btn{
   display: flex;
   justify-content: center;
   padding: 80px 0;
+}
+
+.users-main{
+  display: flex;
+  justify-content: center;
 }

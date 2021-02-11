@@ -1,0 +1,15 @@
+.dm-room-contents{
+  /*display: flex;
+  justify-content: center;*/
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(235, 235, 235);
+  border:1px solid #70707057;
+  height: 100px;
+  width: 500px;
+  margin-top: 80px;
+}
+
+.bit-back{
+  text-align: center;
+}
