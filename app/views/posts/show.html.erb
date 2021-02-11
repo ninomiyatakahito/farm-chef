@@ -1,6 +1,9 @@
 <%= render "shared/header" %>
 
 <div class="post-container">
+  <div class="top-page-posts-btn">
+    <%= link_to "投稿一覧", posts_path, class: 'user-btn' %>
+  </div>
   <h1 class="page-title" >詳細ページ</h1>
     <div class="red-line"></div>
 <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -16,6 +19,7 @@
     <div class="post__user__name">
       <%= link_to @post.user.name , user_path, class: :hoge %>
     </div>
+    <p><%= @post.created_at %> </p>
     <div class="post__detail">
       <%= image_tag @post.image,class: "profile-image" %>
     </div>

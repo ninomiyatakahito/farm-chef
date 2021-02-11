@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
   end
 
   def show
@@ -11,7 +12,7 @@ class UsersController < ApplicationController
     @business_name = user.business_name
     @profile = user.profile
 
-    
+
     @users = User.all
 
     @user = User.find(params[:id])
@@ -33,10 +34,7 @@ class UsersController < ApplicationController
         @entry = Entry.new
       end
     end
-
-    
   end
-
   
 end
 

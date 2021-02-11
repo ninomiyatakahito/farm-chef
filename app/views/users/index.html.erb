@@ -6,12 +6,15 @@
 
     <div class="users-list">
       <% @users.each do |user| %>
+      <% if user.kind == "1" %>
         <li><%= link_to user.kind %></li>
         <li><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></li>
         <li><%= link_to user.name %></li>
         <li><%= link_to user.prefecture %></li>
         <li><%= link_to user.business_name %></li>
         <li><%= link_to user.profile %></li>
+      <% end %>
+
       <% end %>
     </div>
   </div>
@@ -24,11 +27,13 @@
 
     <div class="users-list">
       <% @users.each do |user| %>
+            <% if user.kind == "2" %>
         <li><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></li>
         <li><%= link_to user.name %></li>
         <li><%= link_to user.prefecture %></li>
         <li><%= link_to user.business_name %></li>
         <li><%= link_to user.profile %></li>
+        <% end %>
       <% end %>
     </div>
   </div>

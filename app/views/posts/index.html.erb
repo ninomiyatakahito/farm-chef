@@ -1,5 +1,9 @@
 <%= render "shared/header" %>
 
+
+
+
+
 <div class="posts-list">
   <div class="new-post">
   <li><%= link_to '新規POST', new_post_path, class: :post__btn %></li>
@@ -27,7 +31,7 @@
                       <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user %>
                   </div>
                   <div class="post-date">
-                    <p>2021/01/31 13:45</p>
+                    <p><%= post.created_at %> </p>
                   </div>
                 </div>
                 <div class="card-text">

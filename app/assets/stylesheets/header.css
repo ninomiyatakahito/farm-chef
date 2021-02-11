@@ -54,12 +54,37 @@
 }
 .service-massage-img{
   width: 100%;
+  
 }
+
+.service-massages{
+  position: relative;
+}
+
+.service-vision{
+  padding: 10px 15px;
+  width: 70%;
+  max-width: 500px;
+  font-size: 200%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.349);
+  position: absolute ;
+  top: 30%;
+  left: 10%;
+
+}
+
 
 /*サービスの説明*/
 .service-description{
   height: 400px;
-  background-color: #fff;
+  background-color: rgb(234, 234, 234);
+}
+
+.service-description-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
 }
 
 /*ユーザーボタン*/
@@ -119,6 +144,7 @@
 .top-page-posts-btn{
   display: flex;
   justify-content: center;
+  padding-top: 40px;
 }
 
 
