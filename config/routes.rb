@@ -20,5 +20,7 @@ Rails.application.routes.draw do
   resources :messages, :only => [:create, :index]
   resources :rooms, :only => [:create, :show, :index]
   
+
+
 end
 
