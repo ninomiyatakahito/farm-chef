@@ -5,6 +5,17 @@
     <div class="main">
       <div class="inner">
         <div class="user__wrapper">
+
+ 
+ <% if user_signed_in? %>
+     <% if current_user.id == @user.id %>
+      <div class="user-edit-btn">
+        <li><%=  link_to 'プロフィールを編集する', edit_user_registration_path, class: 'edit-btn' %></li>
+      </div>
+    <% else %>
+    <% end %>
+  <% end %>
+
           <div class="page-title">
             <p>生産者のプロフィール</p>
           </div>

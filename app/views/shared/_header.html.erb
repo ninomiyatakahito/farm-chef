@@ -1,3 +1,4 @@
+<div class="main">
 <div class="share-header">
   <div class="header-logo">
     <%= link_to image_tag("farm-chef-logo.png", class:"farm-chef-icon"), "/" %>
@@ -9,39 +10,52 @@
     </form>
   </div>
 
+<div class="user-bar">
   <%# ログインしているときは以下を表示する %>
     <% if user_signed_in? %>
-      <div class="greeting"> 
-          マイプロフィール
-        <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :hoge%>
-      </div> 
-      <div class="user-edit">
-        <li><%=  link_to 'プロフィール編集', edit_user_registration_path %></li>
+    <div class="my-profile-area">
+      <div class="profile-icon">
+        <%= link_to image_tag("profile-icon-img.png", class:"profile-icon"), "/" %>
       </div>
+      <div class="greeting"> 
+        <%= link_to "マイページ", "/users/#{current_user.id}", class: :hoge%>
+      </div>
+    </div> 
     <% else %>
 <%# // ログインしているときは上記を表示する %>
     <% end %>
 
   <div class="user-status">
     <% if user_signed_in? %>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <div class="profile-icon">
+        <%= link_to image_tag("logout-img.png", class:"profile-icon"), "/" %>
+      </div>
+      <div class="user-status-info">
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      </div>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path %></li>
       <li><%= link_to '新規登録', new_user_registration_path %></li>
     <% end %>
   </div>
+</div>
 
   
 
-  <div class="messages-admin-list">
-    <b>管理者ツール</b>
-    <li><%= link_to '管理者ページ', messages_path %></li>
-  </div>
-  
+
+</div>
 </div>
 
 
-<div class="admin">
+
+</div>
+
+  <div class="messages-admin-list">
+    <b>管理者ツール</b>
+    <li><%#= link_to '管理者ページ', messages_path %></li>
+  </div>
+  
+  <div class="admin">
 <header>
   <nav>
     <ul>
@@ -60,4 +74,3 @@
     </ul>
   </nav>
 </header>
-</div>
