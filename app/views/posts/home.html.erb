@@ -9,9 +9,13 @@
       <div class="service-vision">
         <b>Farm Chef（ファームシェフ）は農家と料理人をつなげる法人向けのサービスです</b>
       </div>
+      <div class="arrow-area">
+        <%= link_to image_tag("arrow.png", class:"arrow-img"), "/" %>
+      </div>
     </div>
 
-    <!--
+
+
     <div class="heading-img">
       <div class="out">
         <img src="">
@@ -27,7 +31,7 @@
         </div>
       </div>
     </div>
-    -->
+    
 
     <div class="concep-message">
       <p>
@@ -36,73 +40,89 @@
       </p>
     </div>
 
-        <div class="search-users">
+    <div class="search-users">
       <div class="search-user">
-        <div class="user-box">
-          <p class="user-description">多様な生産者と繋がることができる。季節や地域の美味しさを味わう人へ。 様々な食材とであえます。</p>
-          <div class="user-box-btn">
-            <%= link_to "料理人を探す", users_path, class: 'user-btn' %>
+
+        <div class="user-box-left">
+          <div class="search-user-garlic-img">
+            <%= link_to image_tag("garlic-and-basil.png", class:"service-massage-img"), "/" %>
+            <div class="search-content">
+              <p class="user-description">多様な生産者と繋がることができる。季節や地域の美味しさを味わう人へ。 様々な食材とであえます。</p>
+              <div class="user-box-btn">
+                <%= link_to "料理人を探す", new_user_path, class: 'user-btn' %>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="user-box">
-          <p class="user-description">新しい顧客を見つけられる。規格外の野菜を売ることが可能になります。</p>
-          <div class="user-box-btn">
-            <%= link_to "生産者を探す", users_path, class: 'user-btn' %>
+
+        <div class="user-box-right">
+          <div class="search-user-calotte-img">
+            <%= link_to image_tag("calotte.png", class:"service-massage-img"), "/" %>
+            <div class="search-content">
+              <p class="user-description">新しい顧客を見つけられる。規格外の野菜を売ることが可能になります。</p>
+              <div class="user-box-btn">
+                <%= link_to "生産者を探す", users_path, class: 'user-btn' %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="arrow-area">
+      <%= link_to image_tag("arrow.png", class:"arrow-img"), "/" %>
+    </div>
 
     <div class="service-description">
       <b class="service-description-title">※みんなの投稿を促すメッセージを追加</b>
     </div>
 
     <div class="home-posts">
-      <div class="card__wrapper">
-        <h1 class="page-title" >投稿一覧</h1>
+      <div class="card__wrapper_img">
+        <h1 class="page-title" >みんなの投稿</h1>
         <div class="red-line"></div>
           <div class="card-main">
-            <div class="posts-list">
-          <% @posts.each do |post| %>
+            <div class="posts-list-top">
+              <% @posts.each do |post| %>
 
-            <div class="card-contents">
-              <div class="card-img-wrapper">
-                <div class="card-img">
-                  <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
-                </div>
-              </div>
+                <div class="card-contents-lists-top">
 
-              <div class="card-content">
-                <div class="postuser-img-name-date">
-                  <div class="postuser-img">
-                    <%=link_to image_tag(post.user.avatar, class: :card__im) %>
+                  <div class="card-img-wrapper">
+                    <div class="card-img-top">
+                      <%= link_to image_tag(post.image, class: :card__img__top), post_path(post.id) %>
+                    </div>
                   </div>
-                  <div class="postuser-name">
-                      <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user %>
-                  </div>
-                  <div class="post-date">
-                    <p><%= post.created_at %> </p>
-                  </div>
-                </div>
-                <div class="card-text">
-                  <%= link_to post.post_text, post_path(post.id) %>
-                </div>
-                <div class="like-count">
-                     いいね!<%= post.likes.count %>
-                </div>
-              </div>
 
+                  <div class="card-content-top">
+                    <div class="postuser-img-name-date">
+                      <div class="post-date-top">
+                        <p><%= post.created_at.strftime('%Y/%m/%d') %> </p>
+                      </div>
+                      <div class="postuser-img-top">
+                        <%=link_to image_tag(post.user.avatar, class: :card__im__top) %>
+                      </div>
+                      <div class="postuser-name-top">
+                          <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user__top %>
+                      </div>
+                    </div>
+
+                    <div class="card-text-top">
+                      <%= link_to post.post_text, post_path(post.id), class: :card__text__top %>
+                    </div>
+                    <div class="like-count">
+                       いいね! <%= post.likes.count %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <div class="top-page-posts-btn">
-      <%= link_to "投稿一覧", posts_path, class: 'user-btn' %>
+      <%= link_to "全ての投稿を見る", posts_path, class: 'user-btn' %>
     </div>
 
     <div class="media-img">

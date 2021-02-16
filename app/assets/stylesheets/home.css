@@ -16,6 +16,7 @@
   text-align: center;
   margin-top: 10%;
   padding: 10px 100px;
+  height: 20px;
 }
 
 .farm-chef-heading-icon{
@@ -26,16 +27,15 @@
 .concep-message{
   display: flex;
   justify-content: center;
-  padding: 80px 0;
 }
 
 .concep-message p{
   font-size: 200%;
   text-align: center;
+  padding-top: 50%;
 }
 
-.service-massage{
-}
+
 .service-massage-img{
   width: 100%;
   
@@ -53,9 +53,18 @@
   color: #fff;
   background-color: rgba(0, 0, 0, 0.349);
   position: absolute ;
-  top: 30%;
+  top: 20%;
   left: 10%;
+}
 
+.arrow-img{
+  width: 100px;
+}
+
+.arrow-area{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 
@@ -73,31 +82,51 @@
 
 /*生産者と料理人を探す*/
 .search-user{
-
-}
-
-.search-user{
   display: flex;
   justify-content: center;
 }
 
-.user-box{
-  background-color: paleturquoise;
+.search-users{
+  max-width: 100%;
+}
+.user-box-left{
   width: 100%;
-  margin: 1px;
-  padding-bottom: 20px;
+  max-width: 600px;
+
+}
+
+.user-box-right{
+  width: 100%;
+  max-width: 599.8px;
 }
 
 .user-description{
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   height: 180px;
   color: #fff;
-  padding-top: 20%;
+  font-size: 25px;
+  padding: 20px 0;
+
 }
 
+.search-user-garlic-img{
+  width: 100%;
+  position: relative;
+}
+
+.search-user-calotte-img{
+  width: 99.9%;
+  position: relative;
+}
+
+.search-content{
+  position: absolute;
+  top: 20%;
+}
 .user-box-btn{
+  padding-top: 15%;
   display: flex;
   justify-content: center;
 }
@@ -131,6 +160,56 @@
   padding-top: 40px;
 }
 
+
+/*投稿の一部*/
+.postuser-img-name-date{
+  padding-top: 10px;
+}
+
+.posts-list-top{
+  display: flex;
+  overflow: scroll;
+}
+
+.card__img__top{
+  border-radius: 30px;
+}
+.card-img-top{
+  width: 200px;
+  max-height: 160px;
+  border-radius: 30px;
+}
+
+.postuser-img-top{
+  padding-left: 20px;
+}
+
+.post-date-top{
+  font-size: 12px;
+}
+
+.card__im__top{
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+}
+
+.card__user__top{
+  font-size: 14px;
+}
+
+.card-text-top{
+  width: 200px;
+}
+
+.card__text__top{
+  font-size: 14px;
+  text-decoration: none;
+  color: #3b3b3b;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
 
 
 /*スライダー部分*/
