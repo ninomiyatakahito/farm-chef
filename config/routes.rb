@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins, controllers: {
+    sessions: 'admins/sessions'
+  }
   get 'followings/index'
   devise_for :users
   get 'posts/index'
@@ -18,5 +20,7 @@ Rails.application.routes.draw do
   resources :messages, :only => [:create, :index]
   resources :rooms, :only => [:create, :show, :index]
   
+
+
 end
 
