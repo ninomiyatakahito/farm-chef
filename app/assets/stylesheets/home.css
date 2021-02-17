@@ -57,6 +57,14 @@
   left: 10%;
 }
 
+.header-ber-lists{
+  position: absolute ;
+  left: 75%;
+  color: #454545;
+  background-color: rgb(213, 213, 213);
+}
+
+
 .arrow-img{
   width: 100px;
 }

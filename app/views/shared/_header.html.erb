@@ -15,10 +15,13 @@
 <div class="user-bar">
   <%# ログインしているときは以下を表示する %>
     <% if user_signed_in? %>
-    <div class="my-profile-area", id="lists" >
+    <div class="my-profile-area" id="lists">
+
+
       <div class="profile-icon">
         <%= link_to image_tag("profile-icon-img.png", class:"profile-icon"), "/" %>
       </div>
+
       <div class="greeting"> 
         <%= link_to "マイページ", "/users/#{current_user.id}", class: :hoge%>
       </div>
