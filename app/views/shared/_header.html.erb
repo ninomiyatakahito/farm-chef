@@ -10,13 +10,10 @@
     </form>
   </div>
 
-        <li class="background-red" id="lists">リスト
-      </li>
-
 <div class="user-bar">
   <%# ログインしているときは以下を表示する %>
     <% if user_signed_in? %>
-    <div class="my-profile-area">
+    <div class="my-profile-area" id="lists">
       <div class="profile-icon">
         <%= link_to image_tag("profile-icon-img.png", class:"profile-icon"), "/" %>
       </div>
@@ -27,6 +24,13 @@
     <% else %>
 <%# // ログインしているときは上記を表示する %>
     <% end %>
+
+    <ul class="show-lists hidden">
+      <li>リスト1</li>
+      <li>リスト2</li>
+      <li>リスト3</li>
+      <li>リスト4</li>
+    </ul>
 
   <div class="user-status">
     <% if user_signed_in? %>
