@@ -316,3 +316,10 @@ input:checked ~ .in img,input:checked ~ .in span::before{
     animation-play-state:paused;/* マウスを載せると一時停止 */
 /*}*/
 
+
+
+
+.sample-roll{
+  height: 1000px;
+}
+
