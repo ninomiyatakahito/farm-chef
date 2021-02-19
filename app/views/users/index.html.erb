@@ -1,29 +1,31 @@
 <%= render "shared/header" %>
+<div class="main">
 <div class="users-main">
   <div class="users-list-wrapper">
     <h1 class="page-title">生産者の一覧ページ</h1>
-      <div class="red-line"></div>
-
-    <div class="users-list">
-      <% @users.each do |user| %>
-      <% if user.kind == "1" %>
-        <li><%= link_to user.kind %></li>
-        <li><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></li>
-        <li><%= link_to user.name %></li>
-        <li><%= link_to user.prefecture %></li>
-        <li><%= link_to user.business_name %></li>
-        <li><%= link_to user.profile %></li>
-      <% end %>
-
-      <% end %>
+    <div class="red-line"></div>
+        <div class="users-list">
+          <% @users.each do |user| %>
+          <% if user.kind == "1" %>
+          <div class="farmer-lists">
+            <li><%= link_to user.kind %></li>
+            <li><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></li>
+            <li><%= link_to user.name %></li>
+            <li><%= link_to user.prefecture %></li>
+            <li><%= link_to user.business_name %></li>
+            <li><%= link_to user.profile %></li>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
     </div>
   </div>
-</div>
 
-<div class="users-list-end-btn">
-  <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+  <div class="users-list-end-btn">
+    <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+  </div>
 </div>
-
+</div>
 <%= render "shared/footer" %>
 
 <h1>DMサンプルアプリ</h1>
