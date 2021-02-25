@@ -59,7 +59,5 @@ gem 'devise'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-
-gem "jquery-rails"

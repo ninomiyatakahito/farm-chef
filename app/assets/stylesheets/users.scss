@@ -87,6 +87,7 @@
   width: 70%;
 }
 
+
 /*DM蘭*/
 .message-main{
   /*display: flex;
@@ -157,23 +158,23 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .farmer-lists{
-  margin-left: auto;
-  margin-right: auto;
+  width: calc((90% - 50px) / 3);
+  margin: 10px 10px;
 }
 
+
 .profile__img{
-  width: 200px;
-  margin-top: 40px;
+  padding: 20px 20px;
 }
 
 .users-list-wrapper{
   padding: 0 20px;
-  max-width: 600px;
+
 }
 
 .users-list-end-btn{
