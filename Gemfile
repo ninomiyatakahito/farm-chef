@@ -61,3 +61,5 @@ gem 'image_processing', '~> 1.2'
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+
+gem "jquery-rails"
