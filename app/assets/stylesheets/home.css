@@ -169,6 +169,79 @@
 }
 
 
+
+/*ボタンサンプル*/
+.test-btn{
+  background-color: #3169d1;
+  color: #fff !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .9s;
+  transition: all .4s;
+  margin: 10px 0 0 0;
+}
+.test-btn:hover{
+	box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	transform: translateY(-2px);
+}
+
+
+
+.test-btn2{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #ff0000b5;
+  width: 50%;
+  max-width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+  color: #fff;
+  transition: 0.5s;
+}
+.test-btn2:hover{
+  border: solid 0.5px;
+  color: #ff0000;
+  background-color: #ffffffb5;
+  opacity: 0.5;
+}
+
+
+.test-btn3{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #ff0000b5;
+  width: 50%;
+  max-width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+  color: #fff;
+  transition: 0.5s;
+}
+.test-btn3:hover{
+  border: solid 0.5px;
+  color: #ff0000;
+  font-weight: bold;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100px;
+}
+
+/*サンプルここまで*/
+
+
+
+
 /*投稿の一部*/
 .postuser-img-name-date{
   padding-top: 10px;
@@ -204,6 +277,9 @@
 
 .card__user__top{
   font-size: 14px;
+  color: #454545;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .card-text-top{
