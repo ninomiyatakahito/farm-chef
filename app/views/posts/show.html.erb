@@ -1,38 +1,66 @@
-<h1>詳細ページ</h1>
-  <div class="return_btn">
-    <%= link_to"トップページに戻る", root_path %>
+<%= render "shared/header" %>
+
+<div class="post-container">
+  <div class="top-page-posts-btn">
+    <%= link_to "投稿一覧", posts_path, class: 'user-btn' %>
   </div>
+  <h1 class="page-title" >詳細ページ</h1>
+    <div class="red-line"></div>
 <% if user_signed_in? && current_user.id == @post.user_id %>
-      <%= link_to @post.user.last_name , root_path, class: :hoge %>
+      
         <div class="post__manage">
           <%= link_to "編集する",  edit_post_path, class: :post__btn %>
           <%= link_to "削除する",  post_path, method: :delete, class: :post__btn %>
         </div>
 <% end %>
 
-<div class="post_body">
-  <div class="post__detail">
-<%= image_tag @post.image %>
+<div class="post-content-show">
+  <div class="post-body">
+    <div class="post__user__name">
+      <%= link_to @post.user.name , user_path, class: :hoge %>
+    </div>
+    <p><%= @post.created_at %> </p>
+    <div class="post__detail">
+      <%= image_tag @post.image,class: "profile-image" %>
+    </div>
+    <div class="post__text">
+      <%=  @post.post_text %>
+    </div>
   </div>
-  <div class="post__detail">
- <%=  @post.post_text %>
- </div>
 </div>
 
+
 <%= form_with model: [@post, @comment], local: true do |f|%>
-            <div class="field">
-              <%= f.label :comment_text, "コメント" %><br />
-              <%= f.text_field :comment_text %>
-            </div>
-            <div class="actions">
-              <%= f.submit "送信する", class: :form__btn %>
-            </div>
+    <div class="field-comment">
+      <%= f.label :comment_text, "コメント" %><br />
+      <%= f.text_field :comment_text %>
+    </div>
+    <div class="actions">
+      <%= f.submit "送信する", class: :form__btn %>
+    </div>
 <% end %>
 
-<% @comments.each do |comment| %>
-  <p>
-  <%= comment.comment_text %>
-  <%= link_to comment.user.last_name, root_path(comment.user.id), class: :comment_user %>
-  </p>
-<% end %>
 
+  <div class="comment-lists">
+    <% @comments.each do |comment| %>
+
+      <p class="comment_text_area">
+        <%= comment.comment_text %>
+      </p>
+      <p class="comment_user_area">
+        <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
+<div class="like-btn">
+<% if current_user.already_liked?(@post) %>
+  <%= button_to 'いいねを取り消す', post_like_path(@post),class: :like_btn, method: :delete %>
+<% else %>
+  <%= button_to 'いいね', post_likes_path(@post) %>
+<% end %>
+</div>
+
+
+<%= render "shared/footer" %>

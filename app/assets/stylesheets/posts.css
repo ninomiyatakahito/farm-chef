@@ -1,0 +1,270 @@
+/*投稿一覧ページ*/
+.new-post{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.post__btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 0 40px;
+}
+li{
+  list-style: none;
+}
+.card__wrapper{
+  max-width: 799px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-img-wrapper{
+  width: 250px;
+
+}
+.card__img{
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 40px;
+  padding: 5px 10px;
+
+}
+
+.card__im{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+
+
+
+}
+
+.card-contents{
+  border:1px solid #70707057;
+  margin-top: 10px;
+  display: flex;
+  height: 200px;
+}
+
+.card-content{
+  margin-left: 10px;
+}
+
+.postuser-img-name-date{
+  display: flex;
+
+}
+
+.postuser-img{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 25px;
+  border: rgb(0, 157, 255);
+  width: 50px;
+  height: 50px;
+}
+
+.postuser-name{
+  margin-left: 10px;
+}
+
+.post-date{
+  margin-left: 10%;
+}
+
+.card-text{
+  width: 93%;
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+
+/*新規投稿ページ*/
+.post-main{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.field-image{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border:1px solid #70707057;
+  height: 40px;
+  width: 500px;
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.post-image-label{
+  padding: 0 20px;
+}
+
+.field{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+
+
+  width: auto;
+}
+
+.post-text{
+  width: 100%;
+  height: 300px;
+  border:1px solid #70707057;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form__btn{
+  color: #f1f1f1;
+  background-color: #00E2FF;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 150%;
+  padding: 5px 50px;
+  border-color: #f1f1f1;
+}
+
+
+/*投稿詳細ページ*/
+.post-container{
+  margin: 0 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post__manage{
+  display: flex;
+  justify-content: space-around;
+  font-size: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.post-content-show{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.field-comment{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.comment-lists{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.comment_text_area{
+  border:1px solid #70707057;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 300px;
+}
+
+/*いいね機能*/
+.like-btn{
+  color: #f1f1f1;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 40px;
+}
+
+
+/*フォロー機能*/
+.followings-btn{
+  background-color:#00E2FF;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.followers-btn{
+  background-color:#f1f1f1;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.follow-counts{
+  display: flex;
+  justify-content: center;
+}
+
+.follow-count{
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+
+/*ユーザーの投稿一覧情報*/
+.posted{
+  border: 1px solid #888787;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.posted-user-name{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.posted-user-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 450px;
+  padding-top: 80px;
+}
+
+.posted-img-text{
+  border: 1px solid #888787;
+  margin-top: 10px;
+  display: flex;
+}
+
+.posted-img{
+  margin: 0 10px;
+}
+
+.posted-text{
+  width: 80%;
+  padding: 10px 20px;
+}

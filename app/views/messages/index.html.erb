@@ -1,0 +1,26 @@
+<h1>管理者ページ</h1>
+<b>以下が各ユーザーのDMやりとり内容</b>
+
+  <div class="users-message-contents-list">
+  <% @messages.each do |message| %>
+    <li><%=message.content%></li> 
+    <li>ユーザーID<%=message.user_id%></li> 
+    <li>チャット部屋番号<%=message.room_id%></li>
+    <li>やり取りの日時<%=message.created_at%></li>  
+        <li><%=message%></li>
+
+  <% end %>
+  </div>
+
+  <% if user_signed_in? %>
+<h2>Hello <%= current_user.email %></h2>
+  <% @users.each do |u| %>
+  <p><a href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
+  <hr>
+  <% end %>
+  <%= link_to "ログアウト", destroy_user_session_path, :method => :delete %>
+<% else %>
+  <%= link_to "ユーザーを登録する", new_user_registration_path %>
+  <br>
+  <%= link_to "ログインする", new_user_session_path %>
+<% end %>

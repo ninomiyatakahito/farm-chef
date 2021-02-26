@@ -3,6 +3,9 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :image
 
-  validates :post_text, presence: true
+  has_many :likes
+
+  validates :post_text, presence: true 
   validates :image, presence: true
+
 end

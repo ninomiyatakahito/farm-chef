@@ -1,0 +1,77 @@
+<div class="main">
+<div class="share-header">
+  <div class="header-logo">
+    <%= link_to image_tag("farm-chef-logo.png", class:"farm-chef-icon"), "/" %>
+  </div>
+  <div class='search-bar-contents'>
+    <form class="search-form" action="#">
+        <input class='input-box' placeholder='キーワードから探す'>
+      <button class="search-button" >検索</button>
+    </form>
+  </div>
+
+<div class="user-bar">
+  <%# ログインしているときは以下を表示する %>
+    <% if user_signed_in? %>
+    <div class="my-profile-area" id="lists">
+
+      <div class="profile-icon">
+        <%= link_to image_tag("profile-icon-img.png", class:"profile-icon"), "/" %>
+      </div>
+
+      <div class="greeting"> 
+        <%= link_to "マイページ", "/users/#{current_user.id}", class: :hoge%>
+      </div>
+    </div> 
+    <% else %>
+<%# // ログインしているときは上記を表示する %>
+    <% end %>
+
+  <div class="user-status">
+    <% if user_signed_in? %>
+      <div class="profile-icon">
+        <%= link_to image_tag("logout-img.png", class:"profile-icon"), "/" %>
+      </div>
+      <div class="user-status-info">
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      </div>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path %></li>
+      <li><%= link_to '新規登録', new_user_registration_path %></li>
+    <% end %>
+  </div>
+</div>
+
+  
+
+
+</div>
+</div>
+
+
+
+</div>
+
+  <!--<div class="messages-admin-list">
+    <b>管理者ツール</b>
+    <li><%#= link_to '管理者ページ', messages_path %></li>
+  </div>-->
+
+<!--<header>
+  <nav>
+    <ul>
+      <%# if user_signed_in? %>
+        <li>ユーザー</li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <%# elsif admin_signed_in? %>
+        <li>管理者</li>
+        <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+      <%# else %>
+        <li>ゲストユーザー</li>
+        <li><%= link_to '管理者ページ', "/admins/sign_in/" %></li>
+        <li><%= link_to "新規登録", new_user_registration_path %></li>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+      <%# end %>
+    </ul>
+  </nav>
+</header>-->
