@@ -87,7 +87,6 @@
   width: 70%;
 }
 
-
 /*DM蘭*/
 .message-main{
   /*display: flex;
@@ -99,6 +98,7 @@
   height: 100px;
   width: 500px;
   margin-top: 80px;
+  list-style: none;
 }
 
 .dm-title{
@@ -152,7 +152,7 @@
   justify-content: center;
 }
 
-/*ユーザー一覧画面*/
+/*料理人と生産者の一覧画面*/
 .users-list{
   margin-top: 20px;
   text-align: center;
@@ -160,6 +160,7 @@
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .farmer-lists{
@@ -167,10 +168,28 @@
   margin: 10px 10px;
 }
 
+.chef-lists{
+  width: calc((90% - 50px) / 3);
+  margin: 10px 10px;
+}
 
 .profile__img{
   padding: 20px 20px;
 }
+
+.card__user__name{
+  text-decoration: none;
+  color: #565656;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card__user__text{
+  font-size: 14px;
+  text-decoration: none;
+  color: #565656;
+}
+
 
 .users-list-wrapper{
   padding: 0 20px;
