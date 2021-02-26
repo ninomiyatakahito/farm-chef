@@ -98,6 +98,7 @@
   height: 100px;
   width: 500px;
   margin-top: 80px;
+  list-style: none;
 }
 
 .dm-title{
@@ -151,29 +152,48 @@
   justify-content: center;
 }
 
-/*ユーザー一覧画面*/
+/*料理人と生産者の一覧画面*/
 .users-list{
   margin-top: 20px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
 .farmer-lists{
-  margin-left: auto;
-  margin-right: auto;
+  width: calc((90% - 50px) / 3);
+  margin: 10px 10px;
+}
+
+.chef-lists{
+  width: calc((90% - 50px) / 3);
+  margin: 10px 10px;
 }
 
 .profile__img{
-  width: 200px;
-  margin-top: 40px;
+  padding: 20px 20px;
 }
+
+.card__user__name{
+  text-decoration: none;
+  color: #565656;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card__user__text{
+  font-size: 14px;
+  text-decoration: none;
+  color: #565656;
+}
+
 
 .users-list-wrapper{
   padding: 0 20px;
-  max-width: 600px;
+
 }
 
 .users-list-end-btn{
