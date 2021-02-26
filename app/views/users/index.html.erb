@@ -1,11 +1,46 @@
 <%= render "shared/header" %>
-<h1 class="page-title">ユーザーの一覧ページ</h1>
-<div class="red-line"></div>
-<% @users.each do |user| %>
-  <li><%= link_to user.last_name %><%= link_to user.first_name %></li>
-  <li><%= link_to user.prefecture %></li>
-  <li><%= link_to user.business_name %></li>
+<div class="main">
+<div class="users-main">
+  <div class="users-list-wrapper">
+    <h1 class="page-title">生産者の一覧ページ1</h1>
+    <div class="red-line"></div>
+      <div class="users_lists">
+        <div class="users-list">
+          <% @users.each do |user| %>
+          <% if user.kind == "1" %>
+          <div class="farmer-lists">
+            <div class="user-kind"><% link_to user.kind %></div>
+            <div class="user-avataer"><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></div>
+            <div class="user-name"><%= link_to user.name, user_path(user.id), class: :card__user__name  %></div>
+            <div class="user-predecture"><%= link_to user.prefecture, user_path(user.id), class: :card__user__text %></div>
+            <div class="business-name"><%= link_to user.business_name, user_path(user.id), class: :card__user__text %></div>
+            <div class="user-profile"><%= link_to user.profile, user_path(user.id), class: :card__user__text %></div>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="users-list-end-btn">
+    <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+  </div>
+</div>
+</div>
+<%= render "shared/footer" %>
+
+<!--h1>DMサンプルアプリ</h1>
+<% if user_signed_in? %>
+<h2>Hello <%= current_user.email %></h2>
+  <% @users.each do |u| %>
+  <p><a href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
+  <hr>
+  <% end %>
+  <%= link_to "ログアウト", destroy_user_session_path, :method => :delete %>
+<% else %>
+  <%= link_to "ユーザーを登録する", new_user_registration_path %>
+  <br>
+  <%= link_to "ログインする", new_user_session_path %>
 <% end %>
 
-
-<%= link_to "トップページに戻る", root_path %>

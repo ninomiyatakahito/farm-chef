@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+  <div class="users-main">
+    <div class="users-list-wrapper">
+        <h1 class="page-title">料理人の一覧ページ</h1>
+        <div class="red-line"></div>
+      <div class="users-lists">
+        <div class="users-list">
+            <% @users.each do |user| %>
+            <% if user.kind == "2" %>
+              <div class="chef-lists">
+                <li><%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></li>
+                <li><%= link_to user.name, user_path(user.id), class: :card__user__name %></li>
+                <li><%= link_to user.prefecture, user_path(user.id), class: :card__user__text %></li>
+                <li><%= link_to user.business_name, user_path(user.id), class: :card__user__text %></li>
+                <li><%= link_to user.profile, user_path(user.id), class: :card__user__text %></li>
+              </div>
+            <% end %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="users-list-end-btn">
+  <%= link_to "トップページに戻る", root_path, class: 'top-btn' %>
+</div>
+
+<%= render "shared/footer" %>
