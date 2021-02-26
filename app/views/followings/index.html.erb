@@ -3,5 +3,5 @@
 
 <% @followings.each do |user| %>
   <%= attachment_image_tag user, :user_image %>
-  <%= link_to user.last_name, (user) %>
+  <%= link_to user.name, (user) %>
 <% end %>

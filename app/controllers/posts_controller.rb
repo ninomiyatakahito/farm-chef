@@ -23,6 +23,8 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
     @like = Like.new
+
+    @posts = Post.all
   end
 
   def edit
@@ -46,6 +48,11 @@ class PostsController < ApplicationController
     post.destroy
     redirect_to root_path
   end
+
+  def home
+    @posts = Post.all
+  end
+
 
   private
 

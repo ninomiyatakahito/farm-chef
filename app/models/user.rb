@@ -15,6 +15,11 @@ class User < ApplicationRecord
          has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
          has_many :followers, through: :reverse_of_relationships, source: :user
 
+         has_many :messages, dependent: :destroy
+         has_many :entries, dependent: :destroy
+         
+
+
         def follow(other_user)
           unless self == other_user
             self.relationships.find_or_create_by(follow_id: other_user.id)
@@ -33,5 +38,7 @@ class User < ApplicationRecord
   def already_liked?(post)                #ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定
     self.likes.exists?(post_id: post.id)
   end
+
+
 end
 

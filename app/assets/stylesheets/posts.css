@@ -1,15 +1,3 @@
-
-
-/*ヘッダーアイコン*/
-.farm-chef-icon{
-  width: 100px;
-  margin-left: 40%;
-  margin-top: 5px;
-}
-
-
-
-
 /*投稿一覧ページ*/
 .new-post{
   display: flex;
@@ -64,6 +52,7 @@ li{
   border:1px solid #70707057;
   margin-top: 10px;
   display: flex;
+  height: 200px;
 }
 
 .card-content{
@@ -213,3 +202,69 @@ li{
   margin: 40px;
 }
 
+
+/*フォロー機能*/
+.followings-btn{
+  background-color:#00E2FF;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.followers-btn{
+  background-color:#f1f1f1;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.follow-counts{
+  display: flex;
+  justify-content: center;
+}
+
+.follow-count{
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+
+/*ユーザーの投稿一覧情報*/
+.posted{
+  border: 1px solid #888787;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.posted-user-name{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.posted-user-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 450px;
+  padding-top: 80px;
+}
+
+.posted-img-text{
+  border: 1px solid #888787;
+  margin-top: 10px;
+  display: flex;
+}
+
+.posted-img{
+  margin: 0 10px;
+}
+
+.posted-text{
+  width: 80%;
+  padding: 10px 20px;
+}
