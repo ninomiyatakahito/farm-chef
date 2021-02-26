@@ -27,11 +27,11 @@
                       <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user %>
                   </div>
                   <div class="post-date">
-                    <p><%= post.created_at %> </p>
+                    <p><%= post.created_at.strftime('%Y/%m/%d') %> </p>
                   </div>
                 </div>
                 <div class="card-text">
-                  <%= link_to post.post_text, post_path(post.id) %>
+                  <%= link_to post.post_text, post_path(post.id), class: :card__user %>
                 </div>
                 <div class="like-count">
                      いいね!<%= post.likes.count %>
@@ -43,4 +43,5 @@
       </div>
     </div>
 </div>
+
 <%= render "shared/footer" %>
