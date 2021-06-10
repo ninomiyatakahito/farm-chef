@@ -12,12 +12,14 @@
   margin-right: auto;
 }
 
+/*
 .heading-img{
   text-align: center;
   margin-top: 10%;
   padding: 10px 100px;
   height: 20px;
 }
+*/
 
 .farm-chef-heading-icon{
   width: 80%;
@@ -37,9 +39,9 @@
 }
 
 
-.service-massage-img{
+.yagi-kike-img{
   width: 100%;
-  
+  margin-top: 0%;
 }
 
 .service-massages{
@@ -48,35 +50,57 @@
 
 .service-vision{
   padding: 10px 15px;
-  width: 70%;
+  width: 30%;
   max-width: 500px;
   font-size: 200%;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.349);
+  background-color: #FFDA33;
   position: absolute ;
   top: 20%;
-  left: 10%;
+  left: 60%;
 }
 
+/*
 .header-ber-lists{
   position: absolute ;
   left: 75%;
   color: #454545;
   background-color: rgb(213, 213, 213);
 }
+*/
+
+/*訴求ポイント*/
 
 
-.arrow-img{
-  width: 100px;
-}
-
-.arrow-area{
+.point-boxes{
   display: flex;
-  justify-content: center;
-  padding-top: 20px;
+  justify-content: space-around;
+}
+
+.point-content{
+  width: 40%;
+  margin: 10%;
+  background-color: #3169d1;
 }
 
 
+.farm-chef-ex-img{
+  margin-top: 50%;
+}
+
+/*farmer chefとは？*/
+.service-title{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.service-description-p{
+  text-align: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
 /*サービスの説明*/
 .service-description{
   height: 400px;
@@ -89,10 +113,37 @@
   padding-top: 40px;
 }
 
+/*３ステップ*/
+.step-content{
+  display: flex;
+  justify-content: center;
+}
+
+.first-step-img{
+  width: 150%;
+  margin-left: 25%;
+}
+
+.service-description-step{
+  width: 50%;
+  margin-left: 35%;
+}
+
+.service-description-step-sec{
+  width: 50%;
+  margin-left: 10%;
+}
+
+.first-step-img-sec{
+  width: 150%;
+  margin-left: -75%;
+}
+
+
 /*生産者と料理人を探す*/
 .search-user{
   display: flex;
-  justify-content: center;
+  justify-content:space-between
 }
 
 .search-users{
@@ -173,7 +224,6 @@
 	box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
 	transform: translateY(-2px);
 }
-
 
 
 .test-btn2{
@@ -401,3 +451,13 @@ input:checked ~ .in img,input:checked ~ .in span::before{
   height: 1000px;
 }
 
+
+
+
+/*パスワードのテストCSS*/
+.password {
+  font-size: 20px;
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
