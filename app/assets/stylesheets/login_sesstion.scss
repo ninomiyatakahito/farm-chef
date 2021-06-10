@@ -1,0 +1,333 @@
+@charset "UTF-8";
+* {
+    outline: none!important;
+}
+
+/*---------------------------------
+  基本設定
+---------------------------------*/
+
+/* 背景色 */
+
+.login{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background:linear-gradient(to bottom, #fff, #FFDA33) no-repeat;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+
+/*---------------------------------
+  ヘッダー
+---------------------------------*/
+
+header {
+    padding: 50px;
+}
+
+.header-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* ヘッダーの上部ボタンの形状 */
+.header-button1, .header-button2 {
+    display: block;
+    text-align: center;
+
+    padding: 10px 30px;
+    border: 1px solid #FFDA33;
+}
+
+.header-button1 {
+    background-color: #fff;
+}
+
+.header-button1 h1 {
+    color: #FFDA33;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.header-button2 {
+    background-color: #FFDA33;
+    border-radius: 8px;
+}
+
+.header-button2 h2 {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* カーソルホバー時 */
+.header-button1:hover {
+    background-color: #FFDA33;
+}
+
+.header-button1:hover h1 {
+    color: #fff;
+}
+
+.header-button2:hover {
+    background-color: #fff;
+}
+
+.header-button2:hover h2 {
+    color: #FFDA33;
+}
+
+
+
+
+
+
+
+
+/*---------------------------------
+  本文
+---------------------------------*/
+main {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+/* ロゴ・タイトル */
+.center-img, .center-title {
+    width: 100%;
+    text-align: center;
+}
+
+
+.center-img {
+    padding: 50px 0;
+}
+
+.center-title {
+    padding-bottom: 100px;
+}
+
+.center-title h2 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+
+
+/* フォーム */
+form {
+    text-align: center;
+}
+
+/* 入力欄 */
+
+.textbox {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+input {
+    padding: 20px 10px;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    background-color: rgba(197, 197, 197, 0.5);
+}
+
+input:focus {
+    background-color: #fff;
+}
+
+
+input::placeholder {
+    color: #707070;
+    text-align: center;
+}
+
+.textbox input {
+    box-shadow: 0px 10px 10px 0px rgba(255, 218, 51, 0.9);
+}
+
+
+/* ログインボタン */
+
+
+.submit-button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submit-button input {
+    background-color: #006eff;
+    color: #fff;
+    box-shadow: 0px 5px 5px 0px rgba(94, 94, 94, 0.5);
+    padding: 18px 10px;
+}
+
+
+/* カーソルホバー時、クリック時 */
+
+.submit-button:hover input {
+    background-color: #fff;
+    color: #FFDA33;
+}
+
+.submit-button:active input {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+/* パスワードを忘れた方 */
+.forget {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #7a7a7a;
+}
+
+.forget:hover {
+    color: #c5c5c5;
+}
+
+
+
+/* 新規登録 */
+.newregi-button {
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #adadad;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(94, 94, 94, 0.5);
+}
+
+.newregi-content {
+    display: flex;
+    color: #fff;
+}
+
+.newregi-content span {
+    border-left: 1px solid #fff;
+    height: 25px;
+}
+
+.newregi-content p {
+    width: 50%;
+    padding-top: 5px;
+}
+
+.newregi-content .small {
+    font-size: 14px;
+
+}
+
+.newregi-content .middle {
+    font-size: 16px;
+}
+
+
+/* カーソルホバー時、クリック時 */
+
+.newregi-button:hover {
+    background-color: #fff;
+}
+
+.newregi-button:hover .newregi-content {
+    color: #adadad;
+}
+
+.newregi-button:active {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------
+  スマホ向け
+------------------------------------------------------------------*/
+
+@media screen and (max-width:400px ) {
+
+
+/*---------------------------------
+  ヘッダー
+---------------------------------*/
+
+header {
+    padding: 50px 20px;
+}
+
+
+
+
+
+
+
+/*---------------------------------
+  本文
+---------------------------------*/
+
+
+
+
+/* 入力欄 */
+
+.textbox {
+    margin-bottom: 30px;
+
+}
+
+input {
+    padding: 15px 10px;
+    width: 270px;
+    font-size: 14px;
+}
+
+
+.submit-button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submit-button input {
+    padding: 12px 10px;
+}
+
+
+
+
+/* 新規登録 */
+.newregi-button {
+    width: 270px;
+    padding: 10px;
+}
+
+
+
+
+}

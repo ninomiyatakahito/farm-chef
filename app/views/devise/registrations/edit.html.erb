@@ -3,7 +3,14 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-
+  <div class="profile-image-wrapper">
+    <h3 class="current-img">現在の画像</h3>
+    <%= image_tag @user.avatar ,class: "profile-image" %>
+  </div>
+  <div class="field">
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
+  </div>
 
   <div class="field">
         <%= f.label :name %><br />
@@ -69,10 +76,6 @@
         <%= f.text_field :profile %>
   </div>
 
-  <div class="field">
-        <%= f.label :avatar %><br />
-        <%= f.file_field :avatar %>
-  </div>
 
   <div class='field'>
     <%= f.select :kind, [["生産者", "1"], ["料理人", "2"]], class:"input-genre", include_blank: "選択して下さい" %>

@@ -1,33 +1,37 @@
 <%= render "shared/header" %>
+  <div class="login">
 
-<h2 class="login-title">Farmer Chef</h2>
+      
+      <h2 class="login-title">Farmer Chef</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="login-contents">
+      <div class="textbox">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+      </div>
+      <div class="textbox">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "氏名" %>
+      </div>
+      <% if devise_mapping.rememberable? %>
+      <div class="login-field">
+        <%#= f.check_box :remember_me %>
+        <%#= f.label :メールアドレスとパスワードを保存する %>
+      </div>
+      <% end %>
+      <div class="submit-button">
+        <%= f.submit "ログイン" ,class:"hoge" %>
+      </div>
+      <% end %>
 
-<div class="login-contents">
-  <div class="login-field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="login-field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="login-field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :メールアドレスとパスワードを保存する %>
+       <a class="forget" href="#">よくあるご質問はこちら</a>
+       <a class="newregi-button" href="#">
+            <div class="newregi-content"><p class="small">既にアカウントを<br>お持ちの方</p><span></span><p class="middle">ログイン</p></div>
+        </a>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "ログイン" ,class:"login-blue-btn" %>
   </div>
-  <% end %>
-</div>
-
 <%= render "devise/shared/links" %>
 
 <%= render "shared/footer" %>

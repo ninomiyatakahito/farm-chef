@@ -69,24 +69,8 @@
 }
 */
 
-.yellow-grass-img{
-  position: absolute ;
-  top: 70%;
-  left: 0%;
-}
-
-.arrow-area{
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-}
-
 /*訴求ポイント*/
-.appeal-point{
-  margin-top: 15%;
-  position: absolute ;
-  top: 50%;
-}
+
 
 .point-boxes{
   display: flex;
@@ -104,6 +88,19 @@
   margin-top: 50%;
 }
 
+/*farmer chefとは？*/
+.service-title{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.service-description-p{
+  text-align: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
 /*サービスの説明*/
 .service-description{
   height: 400px;
@@ -116,10 +113,37 @@
   padding-top: 40px;
 }
 
+/*３ステップ*/
+.step-content{
+  display: flex;
+  justify-content: center;
+}
+
+.first-step-img{
+  width: 150%;
+  margin-left: 25%;
+}
+
+.service-description-step{
+  width: 50%;
+  margin-left: 35%;
+}
+
+.service-description-step-sec{
+  width: 50%;
+  margin-left: 10%;
+}
+
+.first-step-img-sec{
+  width: 150%;
+  margin-left: -75%;
+}
+
+
 /*生産者と料理人を探す*/
 .search-user{
   display: flex;
-  justify-content: center;
+  justify-content:space-between
 }
 
 .search-users{
@@ -427,3 +451,13 @@ input:checked ~ .in img,input:checked ~ .in span::before{
   height: 1000px;
 }
 
+
+
+
+/*パスワードのテストCSS*/
+.password {
+  font-size: 20px;
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
