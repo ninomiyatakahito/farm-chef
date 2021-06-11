@@ -3,6 +3,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <div class="field">
+    <%= f.label :backimage, "背景画像" %><br />
+    <%= f.file_field :backimage %>
+  </div>
+
   <div class="profile-image-wrapper">
     <h3 class="current-img">現在の画像</h3>
     <%= image_tag @user.avatar ,class: "profile-image" %>
