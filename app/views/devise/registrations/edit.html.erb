@@ -7,6 +7,14 @@
     <%= f.label :backimage, "背景画像" %><br />
     <%= f.file_field :backimage %>
   </div>
+      <% if @user.backimage.attached? %>
+      <!-- 画像が登録されている場合の処理-->
+      <p><%= image_tag @user.backimage ,class: "profile-iage" %></p>
+      <% else %>
+      <!--画像が登録されていない場合の処理-->
+      <p><%= image_tag("yagikike.png", class: "profile-iage") %></p>
+      <% end %>
+  
 
   <div class="profile-image-wrapper">
     <h3 class="current-img">現在の画像</h3>

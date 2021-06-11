@@ -43,6 +43,8 @@ class UsersController < ApplicationController
     reset_session
     redirect_to root_path, notice: 'ログアウトしました。'
   end
+
+  
   
   
 end
