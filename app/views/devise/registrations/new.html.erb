@@ -1,21 +1,26 @@
 
-<h2>Sign up</h2>
+
+<div class="register">
+  <div class="sing-up-title">
+    <h2>新規登録</h2>
+    <p>まだFarmer Chefの登録が済んでいない方は以下の項目を記入して新規登録をお願いいたします。</p>
+  </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-<div class="register">
+
   <div class="field">
-    <%= f.label :backimage, "背景画像" %><br />
-    <%= f.file_field :backimage %>
+    <%#= f.label :backimage, "背景画像" %><br />
+    <%#= f.file_field :backimage %>
   </div>
   
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"名前" %><br />
         <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"フリガナ" %><br />
         <%= f.text_field :kana_name %>
   </div>
@@ -43,27 +48,27 @@
   </div>
 
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"郵便番号" %><br />
         <%= f.text_field :post_code %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"都道府県" %><br />
         <%= f.text_field :prefecture %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"市町村" %><br />
         <%= f.text_field :city %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"番地（建物名・部屋番号を含む）" %><br />
         <%= f.text_field :street %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
         <%= f.label :"法人名、屋号、店舗名でも可" %><br />
         <%= f.text_field :business_name %>
   </div>
@@ -73,24 +78,24 @@
         <%= f.text_field :profile %>
   </div>
 
-    <div class="field">
-        <%= f.label :"プロフィール画像" %><br />
-        <%= f.file_field :avatar %>
+  <div class="field">
+        <%#= f.label :"プロフィール画像" %><br />
+        <%#= f.file_field :avatar %>
   </div>
 
-  <div class='field'>
-    <%= f.label :"生産者か料理人を洗濯してください" %><br />
+  <div class='field-reg'>
+    <%= f.label :"職業" %><br />
     <%= f.select :kind, [["生産者", "1"], ["料理人", "2"]], class:"input-genre", include_blank: "選択して下さい" %>
   </div>
 
 
 
-  <div class="field">
+  <div class="field-reg">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
     <%= f.label :"パスワード(半角英数字6文字以上)" %><br />
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -98,7 +103,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field-reg">
     <%= f.label :"パスワード確認用（上記と同じパスワードを入力してください）" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
