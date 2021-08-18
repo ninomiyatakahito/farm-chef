@@ -29,7 +29,6 @@
           <!--プロフィール画像-->
           <div class="page-title"><p>生産者のプロフィール</p></div>
           <div class="red-line"></div>
-
           <% if @user.backimage.attached? %>
           <div class="profile-image-wrapper">
             <%= image_tag @user.avatar ,class: "profile-image" %>

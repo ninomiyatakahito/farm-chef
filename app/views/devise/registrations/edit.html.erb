@@ -18,7 +18,11 @@
 
   <div class="profile-image-wrapper">
     <h3 class="current-img">現在の画像</h3>
-    <%= image_tag @user.avatar ,class: "profile-image" %>
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar ,class: "profile-image" %>
+    <% else %>
+      <%= image_tag("default_user.png",class: "profile-image") %>
+    <% end %>
   </div>
   <div class="field">
         <%= f.label :avatar %><br />
@@ -30,10 +34,14 @@
         <%= f.text_field :name %>
   </div>
 
+
+<!--ユーザーステータスによって表示内容を変更-->
+  <% if @user.kind == "1" %>
   <div class="field">
         <%= f.label :kana_name %><br />
         <%= f.text_field :kana_name %>
   </div>
+  <% end %>
 
 
     <div class="form-group">
