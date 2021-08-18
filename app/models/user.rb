@@ -6,6 +6,7 @@ class User < ApplicationRecord
          has_many :comments , dependent: :destroy
          
          has_one_attached :avatar 
+         has_one_attached :backimage
 
          has_many :likes, dependent:  :delete_all
          has_many :liked_posts, through: :likes, source: :post
@@ -18,6 +19,7 @@ class User < ApplicationRecord
          has_many :messages, dependent: :destroy
          has_many :entries, dependent: :destroy
          
+
 
 
         def follow(other_user)
