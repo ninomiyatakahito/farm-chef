@@ -5,6 +5,67 @@
   margin-right: auto;
 }
 
+/*farmer-chefとは？*/
+.hair-yellow{
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/**/
+.service-title{
+  text-align: center;
+  font-size: 200%;
+}
+
+.service-description-min{
+  text-align: center;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  background-color: #FDDA03;
+  border-radius: 200px;
+  padding: 20px 40px;
+}
+
+/*小さな平塚の絵*/
+.concep-message{
+  display: flex;
+  justify-content: center;
+}
+
+/*farmer-chefにできること３ステップ*/
+.step-content{
+  display: flex;
+  justify-content: center;
+}
+
+.first-step-img{
+  width: 80%;
+  margin-left: 0%;
+}
+
+.service-description-step{
+  width: 50%;
+  margin-left: 35%;
+}
+
+.service-description-step-sec{
+  width: 50%;
+  margin-left: 10%;
+}
+
+.first-step-img-sec{
+  width: 150%;
+  margin-left: -75%;
+}
+
+
+
+
+
 /*farm-chefの横長ロゴ*/
 .top-main-contents{
   max-width: 1920px;
@@ -84,23 +145,7 @@
 }
 
 
-.farm-chef-ex-img{
-  margin-top: 50%;
-}
 
-/*farmer chefとは？*/
-.service-title{
-  text-align: center;
-  margin-top: 5%;
-}
-
-.service-description-p{
-  text-align: center;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-}
 /*サービスの説明*/
 .service-description{
   height: 400px;
@@ -113,31 +158,6 @@
   padding-top: 40px;
 }
 
-/*３ステップ*/
-.step-content{
-  display: flex;
-  justify-content: center;
-}
-
-.first-step-img{
-  width: 150%;
-  margin-left: 25%;
-}
-
-.service-description-step{
-  width: 50%;
-  margin-left: 35%;
-}
-
-.service-description-step-sec{
-  width: 50%;
-  margin-left: 10%;
-}
-
-.first-step-img-sec{
-  width: 150%;
-  margin-left: -75%;
-}
 
 
 /*生産者と料理人を探す*/
