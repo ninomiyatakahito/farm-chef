@@ -16,27 +16,34 @@
     <% end %>
   <% end %>
 
-          <!--背景画像-->
-          <% if @user.backimage.attached? %>
-          <!-- 画像が登録されている場合の処理-->
-            <p><%= image_tag @user.backimage ,class: "profile-iage" %></p>
-          <% else %>
-          <!--画像が登録されていない場合の処理-->
-          <p class="img-defo">好みの画像に変更しましょう！</p>
-          <p><%= image_tag("cabbage.png", :size => "50x50") %></p>
-          <% end %>
-
-          <!--プロフィール画像-->
-          <div class="page-title"><p>生産者のプロフィール</p></div>
-          <div class="red-line"></div>
-          <% if @user.backimage.attached? %>
-          <div class="profile-image-wrapper">
-            <%= image_tag @user.avatar ,class: "profile-image" %>
+        <div class="user-page-header">
+          <div class="user-background-img">
+            <!--背景画像-->
+            <div class="user-background-image">
+              <% if @user.backimage.attached? %>
+              <!-- 画像が登録されている場合の処理-->
+                <p><%= image_tag @user.backimage ,class: "profile-iage" %></p>
+              <% else %>
+              <!--画像が登録されていない場合の処理-->
+              <p class="img-defo">好みの画像に変更しましょう！</p>
+              <p><%= image_tag("cabbage.png", :size => "50x50") %></p>
+              <% end %>
+            </div>
           </div>
-          <% else %>
-          <p class="img-defo">好みの画像に変更しましょう！</p>
-          <p><%= image_tag("default_user.png",class: "profile-image") %></p>
-          <% end %>
+          <div class="user-main-image">
+          <!--プロフィール画像-->
+            <div class="page-title"><p>生産者のプロフィール</p></div>
+            <div class="red-line"></div>
+            <% if @user.backimage.attached? %>
+            <div class="profile-image-wrapper">
+              <%= image_tag @user.avatar ,class: "profile-image" %>
+            </div>
+            <% else %>
+            <p class="img-defo">好みの画像に変更しましょう！</p>
+            <p><%= image_tag("default_user.png",class: "profile-image") %></p>
+            <% end %>
+          </div>
+        </div>
 
           
           <!--フォローボタン-->
