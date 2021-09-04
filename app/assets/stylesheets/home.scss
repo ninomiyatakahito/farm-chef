@@ -12,7 +12,6 @@
   margin-right: auto;
   margin-top: 20px;
 }
-
 /**/
 .service-title{
   text-align: center;
@@ -34,34 +33,156 @@
 .concep-message{
   display: flex;
   justify-content: center;
+  margin-top: 10%;
 }
 
 /*farmer-chefにできること３ステップ*/
-.step-content{
+.about-service{
+  margin: 20px 0 20px 0;
+}
+.first-step-content{
   display: flex;
   justify-content: center;
+  background-color: #FDDA03;
+  padding: 20px;
 }
 
 .first-step-img{
-  width: 80%;
+  max-width: 400px;
   margin-left: 0%;
 }
 
 .service-description-step{
   width: 50%;
-  margin-left: 35%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+.second-step-content{
+  display: flex;
+  padding: 20px;
+}
+
+.make-with-good{
+  max-width: 400px;
+  margin-left: 0%;
 }
 
 .service-description-step-sec{
   width: 50%;
-  margin-left: 10%;
+  margin-left: 20%;
+  text-align: center;
 }
 
-.first-step-img-sec{
-  width: 150%;
-  margin-left: -75%;
+.third-step-content{
+  display: flex;
+  background-color: #FDDA03;
+  padding: 20px;
 }
 
+.with-future{
+  max-width: 460px;
+  margin-left: 0%;
+}
+
+.text-p{
+  margin-top: 30px;
+}
+
+.under-line{
+  height: 2px;
+  width: 50%;
+  margin-left: 20%;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.under-line-yellow{
+  height: 2px;
+  width: 50%;
+  margin-left: 20%;
+  background-color: #FDDA03;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/*使い方の説明*/
+
+.howto-use{
+  margin-top: 10%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+}
+
+/*生産者と料理人を探す*/
+.search-user{
+  display: flex;
+  justify-content:space-between
+}
+
+.search-users{
+  max-width: 100%;
+}
+.user-box-left{
+  width: 100%;
+  max-width: 600px;
+
+}
+
+.user-box-right{
+  width: 100%;
+  max-width: 599.8px;
+}
+
+.user-description{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 180px;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 0;
+
+}
+
+.search-user-garlic-img{
+  width: 100%;
+  position: relative;
+}
+
+.search-user-calotte-img{
+  width: 99.9%;
+  position: relative;
+}
+
+.search-content{
+  position: absolute;
+  top: 20%;
+}
+.user-box-btn{
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-btn{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  background-color: #ff0000b5;
+  width: 50%;
+  max-width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+}
 
 
 
@@ -73,14 +194,7 @@
   margin-right: auto;
 }
 
-/*
-.heading-img{
-  text-align: center;
-  margin-top: 10%;
-  padding: 10px 100px;
-  height: 20px;
-}
-*/
+
 
 .farm-chef-heading-icon{
   width: 80%;
@@ -159,72 +273,6 @@
 }
 
 
-
-/*生産者と料理人を探す*/
-.search-user{
-  display: flex;
-  justify-content:space-between
-}
-
-.search-users{
-  max-width: 100%;
-}
-.user-box-left{
-  width: 100%;
-  max-width: 600px;
-
-}
-
-.user-box-right{
-  width: 100%;
-  max-width: 599.8px;
-}
-
-.user-description{
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 180px;
-  color: #fff;
-  font-size: 25px;
-  padding: 20px 0;
-
-}
-
-.search-user-garlic-img{
-  width: 100%;
-  position: relative;
-}
-
-.search-user-calotte-img{
-  width: 99.9%;
-  position: relative;
-}
-
-.search-content{
-  position: absolute;
-  top: 20%;
-}
-.user-box-btn{
-  padding-top: 15%;
-  display: flex;
-  justify-content: center;
-}
-
-.user-btn{
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f1f1f1;
-  background-color: #ff0000b5;
-  width: 50%;
-  max-width: 200px;
-  height: 50px;
-  border-radius: 20px;
-  font-size: 100%;
-  padding: 0 10px;
-}
 
 
 
