@@ -25,28 +25,58 @@
                 <p><%= image_tag @user.backimage ,class: "profile-iage" %></p>
               <% else %>
               <!--画像が登録されていない場合の処理-->
-              <p class="img-defo">好みの画像に変更しましょう！</p>
+
               <p><%= image_tag("cabbage.png", :size => "50x50") %></p>
               <% end %>
             </div>
           </div>
-          <div class="user-main-image">
-          <!--プロフィール画像-->
-            <div class="page-title"><p>生産者のプロフィール</p></div>
-            <div class="red-line"></div>
-            <% if @user.backimage.attached? %>
-            <div class="profile-image-wrapper">
-              <%= image_tag @user.avatar ,class: "profile-image" %>
+            <div class="user-main-image">
+              <!--プロフィール画像-->
+              <% if @user.backimage.attached? %>
+              <div class="profile-image-wrapper">
+                <%= image_tag @user.avatar ,class: "profile-image" %>
+              </div>
+              <% else %>
+              <p><%= image_tag("default_user.png",class: "profile-image") %></p>
+              <% end %>
             </div>
-            <% else %>
-            <p class="img-defo">好みの画像に変更しましょう！</p>
-            <p><%= image_tag("default_user.png",class: "profile-image") %></p>
-            <% end %>
+            <div class="user-name"><%= @name %></div>
+            <div class="user-prefecture"><%= @prefecture %></div>
+            <div class="user-business-name"><%= @business_name %></div>
           </div>
         </div>
 
+        <div class="user-info">
+          <div class="user-info-upper">
+            <div class="user-image-square">
+              <% if @user.backimage.attached? %>
+              <div class="profile-image-wrapper">
+                <%= image_tag @user.avatar ,class: "user-image" %>
+              </div>
+              <% else %>
+              <p><%= image_tag("default_user.png",class: "profile-image") %></p>
+              <% end %>
+            </div>
+            <div class="user-infos">
+              <div class="main-business-name"><%= @business_name %></div>
+              <div class="main-name"><%= @name %></div>
+              <div class="main-prefecture"><%= @prefecture %></div>
+              <div class="main-profile"><%= @profile %></div>
+            </div>
+          </div>
+          <div class="message-send-btn">
+            <%=  link_to 'メッセージを送る', root_path, class: 'send-btn' %>
+          </div>
+        </div>
+
+        <div class="message-send-second-btn">
+          <%=  link_to 'この生産者にメッセージを送る', root_path, class: 'send-second-btn' %>
+        </div>
+        
+      
+
           
-          <!--フォローボタン-->
+          <!--フォローボタン>
 
         <div class="follow-info">
           <% unless current_user == @user %>
@@ -67,9 +97,9 @@
         <div class="follow-counts">
           <div class="follow-count"><%=@user.followings.count %>フォロー</div>
           <div class="follow-count"><%=@user.followers.count %>フォロワー</div>
-        </div>
+        </div>-->
 
-          <!--ユーザー詳細情報-->
+          <!--ユーザー詳細情報
           <div class="user-info">
             <div class="table">
                 <div class="user-info-list">
@@ -93,7 +123,7 @@
                 </div>
             </div>
           </div>
-          <!--ユーザー詳細情報-->
+          ユーザー詳細情報-->
 
 
         <!--DM機能-->
@@ -101,7 +131,7 @@
           <div class="message-main">
             <b class="dm-title">DM機能</b>
             <h1></h1>
-            <h2 class="dm-from-name"><%= @user.name %>さんとのチャットはこちらから</h2>
+            <!--<h2 class="dm-from-name"><%#= @user.name %>さんとのチャットはこちらから</h2>-->
 
             <% if @user.id == current_user.id %>
               <% else %>
@@ -132,7 +162,32 @@
   </div>
 
 
-  <% if user_signed_in? %>
+
+</div>
+
+  <div class="posted-contents-wrapper">
+
+    <div class="posted">
+      <div class="user-owned-post">投稿一覧</div>
+      <div class="posted-under-line"></div>
+      <div class="red-line"></div>
+      <h2 class="posted-user-contents"></h2>
+        <div class="posted-user-content">
+          <% @user.posts.each do |post| %>
+            <div class="posted-img-text">
+              <div class="posted-img">
+                <%= link_to image_tag(post.image, class: :posts_image), post_path(post.id) %>
+              </div>
+              <div class="posted-text">
+              <a href="/#/<%= post.id %>"><%= post.post_text %></a>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+
+    <% if user_signed_in? %>
      <% if current_user.id == @user.id %>
       <div class="user-edit-btn">
         <li><%=  link_to 'プロフィールを編集する', edit_user_registration_path, class: 'edit-btn' %></li>
@@ -146,27 +201,39 @@
       </div>
     <% end %>
   <% end %>
-</div>
 
-  <div class="posted-contents-wrapper">
-    <div class="posted">
-      <h3  class="posted-user-name"><b><%= @user.name %>さんの投稿一覧</b></h3>
-      <div class="red-line"></div>
-      <h2 class="posted-user-contents"></h2>
-        <div class="posted-user-content">
-          <% @user.posts.each do |post| %>
-            <div class="posted-img-text">
-              <div class="posted-img">
-                <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
-              </div>
-              <div class="posted-text">
-              <a href="/#/<%= post.id %>"><%= post.post_text %></a>
-              </div>
-            </div>
-          <% end %>
-        </div>
+    <div class="message-send-second-btn">
+      <%=  link_to 'この生産者にメッセージを送る', root_path, class: 'send-second-btn' %>
     </div>
-  </div>
+
+
+
+
+      <div class="three-users-list">
+          <p class="another-users-title">他の生産者をみる</p>
+      </div>
+      <div class="another-users">
+        <div class="users-list-content">
+            <% @users.each do |user| %>
+            <% if user.kind == "1" %>
+            <div class="farmer-lists">
+              <div class="user-kind"><% link_to user.kind %></div>
+              <% if user.avatar.attached? %>
+              <div class="user-avataer">
+              <%= link_to image_tag(user.avatar, class: :profile__img), user_path(user.id) %></div>
+              <% else %>
+              <p><%= image_tag("default_user.png",class: "profile-image") %></p>
+              <% end %>
+              <div class="user-names"><%= link_to user.name, user_path(user.id), class: :card__user__name  %></div>
+              <div class="user-predecture"><%= link_to user.prefecture, user_path(user.id), class: :card__user__text %></div>
+              <div class="business-name"><%= link_to user.business_name, user_path(user.id), class: :card__user__text %></div>
+              <div class="user-profile"><%= link_to user.profile, user_path(user.id), class: :card__user__text %></div>
+            </div>
+            <% end %>
+            <% end %>
+          </div>
+      </div>
+
 
 <%= render "shared/footer" %>
 
