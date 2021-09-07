@@ -1,19 +1,247 @@
-.page-title{
-  display: flex;
-  justify-content: center;
-  padding-top: 180px;
-  font-size: 200%;
+/*ユーザーのバックグラウンドイメージ*/
+.profile-iage{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 100% 20%;
+}
+/*ユーザーのプロフィール写真*/
+.profile-image{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.red-line{
-  background-color: red;
+/*ポジションの一決め*/
+.user-background-img{
+  position: relative;
+  display: block;
+}
+.user-main-image{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.user-name{
+  font-weight: bold;
+  font-size: 200%;
+  color: #f1f1f1;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+
+.user-prefecture{
+  font-weight: bold;
+  font-size: 80%;
+  color: #f1f1f1;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.user-business-name{
+  font-weight: bold;
+  font-size: 80%;
+  color: #f1f1f1;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+
+/*ユーザー情報の表示*/
+.user-info{
+  background-color: gold;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
-  width: 400px;
-  height: 1.5px;
-
+  padding: 10px 0;
 }
+/*ユーザー情報一覧の左側（画像）*/
+.user-info-upper{
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-image-square{
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+
+/*ユーザーの情報一覧右側*/
+
+.main-business-name{
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.main-name{
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.main-prefecture{
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.main-profile{
+  background-color: rgb(252, 242, 155);
+  width: 350px;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  font-size: 80%;
+}
+
+
+
+/*メッセージを送るボタン*/
+.message-send-btn{
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe600;
+  background-color: #fff;
+  width: 30%;
+  max-width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+}
+
+/*この生産者にメッセージを送るボタン*/
+.message-send-second-btn{
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe600;
+  background-color: rgb(255, 208, 0);
+  width: 30%;
+  max-width: 3000px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 100%;
+  padding: 0 10px;
+  margin-top: 40px;
+}
+
+
+
+
+/*〇〇さんの投稿一覧*/
+.posted{
+  border: 1px solid #fff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.user-owned-post{
+  font-weight: bold;
+  text-align: center;
+}
+
+.posted-under-line{
+  background-color: #FFDA33;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 4px;
+}
+
+.posted-user-name{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.posted-user-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 80px;
+}
+
+.posted-img-text{
+  border: 2px solid #FFDA33;
+  margin-top: 10px;
+  display: flex;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.posted-img{
+  margin: 0 10px;
+}
+
+.posted-text{
+  width: 80%;
+  padding: 10px 20px;
+}
+
+.posts_image{
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*他の生産者をみる*/
+
+.another-users{
+  background-color: #FFDA33;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+}
+
+.another-users-title{
+  font-weight: bold;
+  text-align: center;
+}
+
+.three-users-list{
+  margin-top: 40px;
+  background-color: #D7D6D5;
+  height: 100px;
+}
+
+.users-list-content{
+  margin-top: 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .post__detail{
   display: flex;
@@ -48,39 +276,6 @@
   margin-top: 40px;
 }
 
-/*ユーザー詳細情報*/
-.user-info{
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-}
-
-.user-info-list{
-  display: flex;
-  justify-content: space-around;
-  border:1px solid #70707057;
-  width: 400px;
-  margin: 3px;
-  padding: 20px 40px;
-}
-
-.table__col1{
-  color: #707070;
-}
-
-.table__col2{
-  text-align: center;
-  font-size: 150%;
-  width: 70%;
-}
-
-.table__col3{
-  text-align: center;
-  font-size: 100%;
-  width: 70%;
-}
 
 /*DM蘭*/
 .message-main{
@@ -105,9 +300,7 @@
 
 
 /*プロフィール編集ボタン*/
-.user-edit-btn{
 
-}
 .edit-btn{
   text-decoration: none;
   display: flex;
