@@ -1,7 +1,13 @@
 <%= render "shared/header" %>
 
+
+<div class="main">
+  <div class="posts-list">
+      <div class="users-posts-image">
+        <%= link_to image_tag("new-postpage.png", class:"yagi-kike-img") %>
+      </div>
+  </div>
 <div class="post-main">
-  <h2 class="page-title">投稿ページ</h2>
   <div class="red-line"></div>
   <%= form_with(model: @post, local: true) do |f| %>
 
@@ -20,6 +26,7 @@
   </div>
 
   <% end %>
+</div>
 </div>
 
 <%= render "shared/footer" %>
