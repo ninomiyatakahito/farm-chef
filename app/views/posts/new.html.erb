@@ -7,26 +7,35 @@
         <%= link_to image_tag("new-postpage.png", class:"yagi-kike-img") %>
       </div>
   </div>
-<div class="post-main">
-  <div class="red-line"></div>
-  <%= form_with(model: @post, local: true) do |f| %>
 
-  <div class="field-image">
-    <%= f.label :image, "画像", class:"post-image-label" %><br />
-    <%= f.file_field :image, class:"post-image"%>
+  <div class="post-main">
+    <div class="red-line"></div>
+    <%= form_with(model: @post, local: true) do |f| %>
+
+    <div class="field-image">
+      <div class="image-select-left">
+        <%= link_to image_tag("image-select.png", class:"image-select-img") %>
+        <%= f.label :image, "画像を選択", class:"post-image-label" %><br />
+      </div>
+      <div class="image-select-right">
+        <%= f.file_field :image, class:"post-image"%>
+      </div>
+    </div>
+
+    <div class="post-text-field">
+      <div class="post-content-top">
+        <%= link_to image_tag("pen.png", class:"pen-img") %>
+        <p class="image-label">投稿内容</p>
+      </div>
+        <%= f.text_field :post_text, class:"post-text" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "投稿する", class: :form__btn  %>
+    </div>
+
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :post_text, "投稿内容" %><br />
-    <%= f.text_field :post_text, class:"post-text" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
-  </div>
-
-  <% end %>
-</div>
 </div>
 
 <%= render "shared/footer" %>
