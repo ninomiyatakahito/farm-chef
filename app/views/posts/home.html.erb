@@ -33,13 +33,7 @@
       </div>
       <div class="service-massage">
         <%= link_to image_tag("top-img.png", class:"yagi-kike-img"), "/" %>
-<<<<<<< Updated upstream
-=======
-      </div>
-      <div class="service-vision">
 
->>>>>>> Stashed changes
-      </div>
       
       <div class="arrow-area">
         <%#= link_to image_tag("yellow_grass.png", class:"yellow-grass-img"), "/" %>
@@ -162,8 +156,7 @@
                         <p><%= post.created_at.strftime('%Y/%m/%d') %> </p>
                       </div>
                       <div class="postuser-img-top">
-                        <%=link_to image_tag(post.user.avatar, class: :card__im__top) %>
-                      </div>
+ 
                       <div class="postuser-name-top">
                           <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user__top %>
                       </div>

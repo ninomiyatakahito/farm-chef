@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @users = User.all
     @posts = Post.all
     @room = Room.find(params[:id])
     if Entry.where(:user_id => current_user.id, :room_id => @room.id).present?
