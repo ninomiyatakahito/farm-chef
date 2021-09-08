@@ -1,47 +1,80 @@
 <%= render "shared/header" %>
 
-<div class="posts-list">
-  <div class="new-post">
-  <li><%= link_to '新規POST', new_post_path, class: :post__btn %></li>
-  </div>
-  <li><%= link_to 'ユーザーの一覧', users_path %></li>
 
-<div class="card__wrapper">
-  <h1 class="page-title" >投稿一覧...</h1>
-    <div class="red-line"></div>
-      <div class="card-main">
-        <div class="posts-list">
-        <% @posts.each do |post| %>
-            <div class="card-contents">
-              <div class="card-img-wrapper">
-                <div class="card-img">
-                  <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+<div class="main">
+  <div class="posts-list">
+      <div class="users-posts-image">
+        <%= link_to image_tag("users-posts.png", class:"yagi-kike-img"), "/" %>
+        <div class="page-massage">
+        <%= link_to image_tag("post-page-massage.png", class:"page-massage-bk") %>
+        <p class="post-top-text">生産者・料理人がそれぞれ伝えたいことを投稿していきます。 余ってしまった野菜の告知や、求めている食材が見つからない場合、 こちらで投稿することでより多くの方と繋がれる可能性が産まれます。</p>
+      </div>
+  </div>
+
+  <h1 class="all-post" >全ての投稿</h1>
+  <div class="card__wrapper">
+      <div class="red-line"></div>
+        <div class="card-main">
+          <div class="posts-list">
+            <% @posts.each do |post| %>
+              <div class="card-contents">
+                <div class="card-content">
+                  <div class="postuser-img-name-date">
+
+                      <div class="post-header">
+                        <div class="post-header-left">
+                          <% if post.user.avatar.attached? %>
+                            <div class="postuser-img">
+                              <%=link_to image_tag(post.user.avatar, class: :card__im) %>
+                            </div>
+                          <% else %>
+                            <p><%= image_tag("default_user.png",class: :card__im) %></p>
+                          <% end %>
+                        </div>
+                        <div class="post-header-right">
+                          <div class="postuser-name">
+                            <%= link_to "#{post.user.name}さんが投稿しました。", user_path(post.user.id), class: :card__user %>
+                          </div>
+                          <div class="post-data">
+                            <p><%= post.created_at.strftime('%Y/%m/%d') %> </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-img-wrapper">
+                        <div class="card-text">
+                          <%= link_to post.post_text, post_path(post.id), class: :card__user %>
+                        </div>
+                        <div class="card-img">
+                          <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+                        </div>
+                      </div>
+
+                      <div class="post-footer">
+                        <div class="like-count">
+                          いいね！ <%= post.likes.count %>
+                        </div>
+
+                        <div class="comments-count">
+                          コメント <%= post.comments.count %>
+                        </div>
+                      </div>
+
+                  </div>
                 </div>
               </div>
-              <div class="card-content">
-                <div class="postuser-img-name-date">
-                  <div class="postuser-img">
-                    <%=link_to image_tag(post.user.avatar, class: :card__im) %>
-                  </div>
-                  <div class="postuser-name">
-                      <%= link_to "#{post.user.name}", user_path(post.user.id), class: :card__user %>
-                  </div>
-                  <div class="post-date">
-                    <p><%= post.created_at.strftime('%Y/%m/%d') %> </p>
-                  </div>
-                </div>
-                <div class="card-text">
-                  <%= link_to post.post_text, post_path(post.id), class: :card__user %>
-                </div>
-                <div class="like-count">
-                     いいね!<%= post.likes.count %>
-                </div>
-              </div>
-            </div>
-        <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
+  </div>
+
+
+  <div class="new-post">
+    <li><%= link_to '新規POST', new_post_path, class: :post__btn %></li>
+  </div>
+    <li><%= link_to 'ユーザーの一覧', users_path %></li>
 </div>
+
 
 <%= render "shared/footer" %>

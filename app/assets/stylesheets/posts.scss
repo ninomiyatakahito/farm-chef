@@ -1,10 +1,27 @@
-/*投稿一覧ページ*/
-.new-post{
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+/*みんなの投稿*/
+.page-massage-bk{
+  width: 600px;
 }
 
+.page-massage{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.post-top-text{
+  width: 60%;
+  max-width: 450px;
+  position: absolute;
+  font-size: 90%;
+  top: 13%;
+  left: 30%;
+  margin-top: 10px;
+  
+}
+
+/*投稿するボタン（青）*/
 .post__btn{
   text-decoration: none;
   display: flex;
@@ -18,15 +35,98 @@
   font-size: 150%;
   padding: 0 40px;
 }
+
+.new-post{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+/*投稿された内容の一覧*/
 li{
   list-style: none;
 }
+
 .card__wrapper{
-  max-width: 799px;
+  max-width: 699px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #FFDA33;
+  padding: 0 120px;
+}
+
+.all-post{
+  font-weight: bold;
+  font-size: 120%;
+  text-align: center;
+  background-color: #FFDA33;
+  color: #f1f1f1;
+  padding: 10px 0;
+  margin-top: 40px;
+  max-width: 699px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.card-contents{
+  border: 2px solid #e7e7e7;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.card__im{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.post-header{
+  display: flex;
+}
+
+.card__img{
+  margin-top: 20px;
+  max-width: 199px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.postuser-name{
+  margin-top: 15px;
+  font-size: 70%;
+}
+
+.post-data{
+  font-size: 70%;
+  color: gray;
+}
+
+.card-text{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 90%;
+}
+
+/*いいねとコメントの数のカウント*/
+.post-footer{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: gray;
+  font-size: 80%;
+}
+
+.like-count{
+  margin-right: 10px;
+  margin-left: 40px;
+}
+
+/*
 .card-img-wrapper{
   width: 250px;
 }
@@ -98,6 +198,7 @@ li{
   max-width: 400px;
   margin-left: 20px;
 }
+*/
 
 
 /*新規投稿ページ*/
